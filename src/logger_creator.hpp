@@ -25,8 +25,8 @@ namespace al{
        * affect previously generated loggers, but will affect any loggers
        * generated after this call.
        */
-      logger_creator& add_handler(handler *new_handler){
-        handler_list.push_back(std::shared_ptr<handle>(new_handler));
+      logger_creator& add_handler(std::shared_ptr<handler> new_handler){
+        handler_list.push_back(new_handler);
         return *this;
       }
 
