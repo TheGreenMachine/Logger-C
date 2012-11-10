@@ -1,4 +1,5 @@
 #include "logger.hpp"
+using namespace al;
 
 void logger::log( level l, const std::string& message){
   if(l<ignore_level){

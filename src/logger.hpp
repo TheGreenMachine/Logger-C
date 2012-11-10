@@ -6,27 +6,30 @@
 #include "levels.hpp"
 #include "handler.hpp"
 
-class end{};
+namespace al{
 
-class logger{
-  public:
-    logger(const std::list<std::shared_ptr<handler>>& handlers, level ignore,
-        const std::string& logger_name):
-      ignore_level(ignore), handler_list(handlers), name(logger_name), current_level(level::info){}
+  class end{};
 
-    void log(level, const std::string&);
+  class logger{
+    public:
+      logger(const std::list<std::shared_ptr<handler>>& handlers, level ignore,
+          const std::string& logger_name):
+        ignore_level(ignore), handler_list(handlers), name(logger_name), current_level(level::info){}
 
-    logger& operator<<(level);
-    logger& operator<<(const std::string&);
-    logger& operator<<(end);
+      void log(level, const std::string&);
 
-  private:
-      level ignore_level;
-      const std::list<std::shared_ptr<handler>>& handler_list;
-      const std::string name;
+      logger& operator<<(level);
+      logger& operator<<(const std::string&);
+      logger& operator<<(end);
 
-      std::string message;
-      level current_level;
-};
+    private:
+        level ignore_level;
+        const std::list<std::shared_ptr<handler>>& handler_list;
+        const std::string name;
+
+        std::string message;
+        level current_level;
+  };
+}
 
 #endif
