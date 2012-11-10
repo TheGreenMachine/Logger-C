@@ -6,7 +6,9 @@
 
 namespace al{
   /**
-   * A simple handler, it prints all log entries to cerr.
+   * @Class cerr_handle
+   * @brief A simple handler, it prints all log entries to cerr.
+   *
    * The messages are of the form "(level) name : message" for easy readability.
    */
   class cerr_handler : public handler{

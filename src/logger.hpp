@@ -10,19 +10,26 @@
 namespace al{
 
   /**
-   * A simple empty class that should be used to signal the end of a log entry
+   * @Class end
+   * @brief A simple empty class that should be used to signal the end of a log entry
    */
-  class end{} endl;
+  class end{};
+
+  extern end endl;
 
   /**
-   *logger is a class which accepts log messages with the << operator or through
-   *a member function called log. It then passes the message off to its predetermined handlers.
+   * @Class logger
+   *@brief logger is a class which accepts log messages with the << operator or through a member function called log. It then passes the message off to its predetermined handlers.
    */
   class logger{
     public:
       /**
        * This constructs a logger with a list of handlers, an ignore level
        * and a name.
+       *
+       * @param handlers The list of handlers to be attached to this logger.
+       * @param ignore The ignore level for the logger.
+       * @param logger_name The name that will appear in logs to identify this class.
        */
       logger(const std::list<std::shared_ptr<handler>>& handlers, level ignore,
           const std::string& logger_name):
@@ -44,7 +51,10 @@ namespace al{
       logger& operator<<(const std::string&);
 
       /**
-       * logs the current message
+       * Logs the current message
+       *
+       * Note that here the end object **is a dummy**. It has no intrinsic meaning other than to
+       * ensure that this overload is called.
        */
       logger& operator<<(end);
 

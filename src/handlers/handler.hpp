@@ -7,17 +7,20 @@
 namespace al{
   
   /**
-   * An abstract base class for all handler classes.
+   * @Class handler
+   * @brief An abstract base class for all handler classes.
    */
   class handler{
     public:
       /**
        * This is the method called to handle a log entry.
-       * level is the level of the entry.
-       * name is the name of the logger that generated it.
-       * message is the actual text of the entry
+       * @param l The level of the entry.
+       * @param name The name of the logger that generated it.
+       * @param message The actual text of the entry
        */
-      virtual void handle(level, const std::string& name, const std::string& message)=0;
+      virtual void handle(level l, const std::string& name, const std::string& message)=0;
+
+      virtual ~handler(){}
     protected:
       virtual std::string to_string(level l){
         switch(l){

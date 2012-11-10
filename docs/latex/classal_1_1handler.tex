@@ -1,0 +1,60 @@
+\hypertarget{classal_1_1handler}{\section{al\-:\-:handler \-Class \-Reference}
+\label{classal_1_1handler}\index{al\-::handler@{al\-::handler}}
+}
+
+
+\-An abstract base class for all handler classes.  
+
+
+
+
+{\ttfamily \#include $<$handler.\-hpp$>$}
+
+\-Inheritance diagram for al\-:\-:handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classal_1_1handler}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classal_1_1handler_a29a3fb2757d02ed144cb71166aad1dfe}{handle} (level l, const std\-::string \&name, const std\-::string \&message)=0
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classal_1_1handler_a46745146bc6348c43f6fd469df59ef2a}{virtual std\-::string {\bfseries to\-\_\-string} (level l)}\label{classal_1_1handler_a46745146bc6348c43f6fd469df59ef2a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-An abstract base class for all handler classes. 
+
+handler 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classal_1_1handler_a29a3fb2757d02ed144cb71166aad1dfe}{\index{al\-::handler@{al\-::handler}!handle@{handle}}
+\index{handle@{handle}!al::handler@{al\-::handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf al\-::handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{level}]{l, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{classal_1_1handler_a29a3fb2757d02ed144cb71166aad1dfe}
+\-This is the method called to handle a log entry. 
+\begin{DoxyParams}{\-Parameters}
+{\em l} & \-The level of the entry. \\
+\hline
+{\em name} & \-The name of the logger that generated it. \\
+\hline
+{\em message} & \-The actual text of the entry \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/handlers/handler.\-hpp\end{DoxyCompactItemize}

@@ -10,13 +10,14 @@
 namespace al{
   
   /**
-   * This class should be used to specify the settings of a logger or loggers
-   * and then to generate them.
+   * @Class logger_creator
+   * @brief This class should be used to specify the settings of a logger or loggers and then to generate them.
    */
   class logger_creator{
     public:
       /**
        * creates a default logger, the initial ignore level is none
+       * 
        */
       logger_creator():ignore_level(level::none) {}
 
@@ -24,8 +25,10 @@ namespace al{
        * This adds a new handler to the list of handlers. This will NOT
        * affect previously generated loggers, but will affect any loggers
        * generated after this call.
+       *
+       * @param new_handler The handler that will be added.
        */
-      logger_creator& add_handler(std::shared_ptr<handler> new_handler){
+      logger_creator& add_handler(const std::shared_ptr<handler>& new_handler){
         handler_list.push_back(new_handler);
         return *this;
       }
@@ -33,9 +36,11 @@ namespace al{
       /**
        * This sets the ignore level on any loggers generated after this call.
        * It will NOT affect any previously created loggers.
+       *
+       * @param l The level that will be the new ignore level.
        */
-      logger_creator& set_ignore(level level){
-        ignore_level = level;
+      logger_creator& set_ignore(const level& l){
+        ignore_level = l;
         return *this;
       }
 
@@ -43,7 +48,7 @@ namespace al{
        * Generates a new logger with the current list of handlers, the current
        * ignore level and the suppplied name
        */
-      logger spawn(std::string&& name){
+      logger spawn(const std::string& name){
         return logger(handler_list, ignore_level, name); 
       }
 

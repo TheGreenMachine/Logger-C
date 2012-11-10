@@ -1,0 +1,619 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 9;}
+{\s50\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext51 List Continue 0;}
+{\s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext52 List Continue 1;}
+{\s52\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext53 List Continue 2;}
+{\s53\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext54 List Continue 3;}
+{\s54\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext55 List Continue 4;}
+{\s55\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext56 List Continue 5;}
+{\s56\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext57 List Continue 6;}
+{\s57\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext58 List Continue 7;}
+{\s58\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 8;}
+{\s59\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 9;}
+{\s60\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext61 DescContinue 0;}
+{\s61\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext62 DescContinue 1;}
+{\s62\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext63 DescContinue 2;}
+{\s63\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext64 DescContinue 3;}
+{\s64\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext65 DescContinue 4;}
+{\s65\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext66 DescContinue 5;}
+{\s66\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext67 DescContinue 6;}
+{\s67\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext68 DescContinue 7;}
+{\s68\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 8;}
+{\s69\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 9;}
+{\s70\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext81 LatexTOC 0;}
+{\s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext82 LatexTOC 1;}
+{\s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext83 LatexTOC 2;}
+{\s73\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext84 LatexTOC 3;}
+{\s74\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext85 LatexTOC 4;}
+{\s75\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext86 LatexTOC 5;}
+{\s76\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext87 LatexTOC 6;}
+{\s77\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext88 LatexTOC 7;}
+{\s78\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 8;}
+{\s79\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 9;}
+{\s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext81 \sautoupd List Bullet 0;}
+{\s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid \sbasedon0 \snext82 \sautoupd List Bullet 1;}
+{\s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid \sbasedon0 \snext83 \sautoupd List Bullet 2;}
+{\s83\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls4\adjustright \fs20\cgrid \sbasedon0 \snext84 \sautoupd List Bullet 3;}
+{\s84\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls5\adjustright \fs20\cgrid \sbasedon0 \snext85 \sautoupd List Bullet 4;}
+{\s85\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls6\adjustright \fs20\cgrid \sbasedon0 \snext86 \sautoupd List Bullet 5;}
+{\s86\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls7\adjustright \fs20\cgrid \sbasedon0 \snext87 \sautoupd List Bullet 6;}
+{\s87\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls8\adjustright \fs20\cgrid \sbasedon0 \snext88 \sautoupd List Bullet 7;}
+{\s88\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls9\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 8;}
+{\s89\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls10\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 9;}
+{\s90\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext91 \sautoupd List Enum 0;}
+{\s91\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext92 \sautoupd List Enum 1;}
+{\s92\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext93 \sautoupd List Enum 2;}
+{\s93\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext94 \sautoupd List Enum 3;}
+{\s94\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext95 \sautoupd List Enum 4;}
+{\s95\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s96\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s97\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext98 \sautoupd List Enum 7;}
+{\s98\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 8;}
+{\s99\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 9;}
+}
+{\comment begin body}
+{\info 
+{\title {\comment Al  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+0.1 \par
+}}Al}
+{\comment Generated byDoxgyen. }
+{\creatim \yr2012\mo11\dy10\hr4\min4\sec57}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt TITLE}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Version 0.1\par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt CREATEDATE}}\par
+\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Table of Contents\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Index\par \pard\plain 
+{\tc \v Hierarchical Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Class Hierarchy\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This inheritance list is sorted roughly, but not completely, alphabetically:}
+{
+\par
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+al::end\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+al::handler\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAB \\*MERGEFORMAT}{\fldrslt pagenum}}
+{
+\par
+\pard\plain \s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+al::cerr_handler\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+al::logger\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+al::logger_creator\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Index\par \pard\plain 
+{\tc \v Class Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Class List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the classes, structs, unions and interfaces with brief descriptions:}
+{
+\par
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b al::cerr_handler} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A simple handler, it prints all log entries to cerr })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b al::end} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A simple empty class that should be used to signal the end of a log entry })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b al::handler} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+An abstract base class for all handler classes })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b al::logger} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Logger is a class which accepts log messages with the << operator or through a member function called log. It then passes the message off to its predetermined handlers })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b al::logger_creator} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+This class should be used to specify the settings of a logger or loggers and then to generate them })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Documentation{\tc \v Class Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+al::cerr_handler Class Reference\par \pard\plain 
+{\tc\tcl2 \v al::cerr_handler}
+{\xe \v al::cerr_handler}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A simple handler, it prints all log entries to cerr. }}\par
+{
+{\f2 #include <cerr_handler.hpp>}}\par
+Inheritance diagram for al::cerr_handler:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classal_1_1cerr__handler.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A simple handler, it prints all log entries to cerr. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+cerr_handle The messages are of the form "(level) name : message" for easy readability. \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+src/handlers/cerr_handler.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+al::end Class Reference\par \pard\plain 
+{\tc\tcl2 \v al::end}
+{\xe \v al::end}
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A simple empty class that should be used to signal the end of a log entry. }}\par
+{
+{\f2 #include <logger.hpp>}}\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A simple empty class that should be used to signal the end of a log entry. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+end \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+src/logger.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+al::handler Class Reference\par \pard\plain 
+{\tc\tcl2 \v al::handler}
+{\xe \v al::handler}
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+An abstract base class for all handler classes. }}\par
+{
+{\f2 #include <handler.hpp>}}\par
+Inheritance diagram for al::handler:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classal_1_1handler.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b handle} (level l, const std::string &name, const std::string &message)=0\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+virtual std::string {\b to_string} (level l){\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+An abstract base class for all handler classes. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+handler \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v handle\:al::handler}
+{\xe \v al::handler\:handle}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual void {\b al::handler::handle} (level {\i l}, const std::string & {\i name}, const std::string & {\i message}){\f2  [pure virtual]}}}
+\par
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+This is the method called to handle a log entry. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Parameters:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i l} \cell }{The level of the entry. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i name} \cell }{The name of the logger that generated it. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i message} \cell }{The actual text of the entry \cell }
+{\row }
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+src/handlers/handler.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+al::logger Class Reference\par \pard\plain 
+{\tc\tcl2 \v al::logger}
+{\xe \v al::logger}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+logger is a class which accepts log messages with the << operator or through a member function called log. It then passes the message off to its predetermined handlers. }}\par
+{
+{\f2 #include <logger.hpp>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b logger} (const std::list< std::shared_ptr< {\b handler} >> &handlers, level ignore, const std::string &logger_name)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b log} (level, const std::string &)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b logger} & {\b operator<<} (level)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b logger} & {\b operator<<} (const std::string &)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b logger} & {\b operator<<} ({\b end})\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+logger is a class which accepts log messages with the << operator or through a member function called log. It then passes the message off to its predetermined handlers. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+logger \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v logger\:al::logger}
+{\xe \v al::logger\:logger}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b al::logger::logger} (const std::list< std::shared_ptr< {\b handler} >> & {\i handlers}, level {\i ignore}, const std::string & {\i logger_name}){\f2  [inline]}}}
+\par
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+This constructs a logger with a list of handlers, an ignore level and a name.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Parameters:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i handlers} \cell }{The list of handlers to be attached to this logger. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i ignore} \cell }{The ignore level for the logger. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i logger_name} \cell }{The name that will appear in logs to identify this class. \cell }
+{\row }
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v log\:al::logger}
+{\xe \v al::logger\:log}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void {\b logger::log} (level {\i l}, const std::string & {\i message})}}
+\par
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Logs the message with all of the registered handlers \par
+}}
+{\xe \v operator<<\:al::logger}
+{\xe \v al::logger\:operator<<}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b logger} & logger::operator<< (level {\i l})}}
+\par
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Sets the level of the current message to a new level \par
+}}
+{\xe \v operator<<\:al::logger}
+{\xe \v al::logger\:operator<<}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b logger} & logger::operator<< (const std::string & {\i input})}}
+\par
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Appends the string to the current message \par
+}}
+{\xe \v operator<<\:al::logger}
+{\xe \v al::logger\:operator<<}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b logger} & logger::operator<< ({\b end} )}}
+\par
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Logs the current message\par
+Note that here the end object **is a dummy**. It has no intrinsic meaning other than to ensure that this overload is called. \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+src/logger.hpp\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+src/logger.cpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+al::logger_creator Class Reference\par \pard\plain 
+{\tc\tcl2 \v al::logger_creator}
+{\xe \v al::logger_creator}
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+This class should be used to specify the settings of a logger or loggers and then to generate them. }}\par
+{
+{\f2 #include <logger_creator.hpp>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b logger_creator} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b logger_creator} & {\b add_handler} (const std::shared_ptr< {\b handler} > &new_handler)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b logger_creator} & {\b set_ignore} (const level &l)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b logger} {\b spawn} (const std::string &name)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::list< std::shared_ptr\par
+< {\b handler} > > {\b handler_list}{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+level {\b ignore_level}{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+This class should be used to specify the settings of a logger or loggers and then to generate them. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\b logger_creator} \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v logger_creator\:al::logger_creator}
+{\xe \v al::logger_creator\:logger_creator}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b al::logger_creator::logger_creator} (){\f2  [inline]}}}
+\par
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+creates a default logger, the initial ignore level is none \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v add_handler\:al::logger_creator}
+{\xe \v al::logger_creator\:add_handler}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b logger_creator}& {\b al::logger_creator::add_handler} (const std::shared_ptr< {\b handler} > & {\i new_handler}){\f2  [inline]}}}
+\par
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+This adds a new handler to the list of handlers. This will NOT affect previously generated loggers, but will affect any loggers generated after this call.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Parameters:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i new_handler} \cell }{The handler that will be added. \cell }
+{\row }
+}
+}}
+{\xe \v set_ignore\:al::logger_creator}
+{\xe \v al::logger_creator\:set_ignore}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b logger_creator}& {\b al::logger_creator::set_ignore} (const level & {\i l}){\f2  [inline]}}}
+\par
+{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+This sets the ignore level on any loggers generated after this call. It will NOT affect any previously created loggers.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Parameters:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i l} \cell }{The level that will be the new ignore level. \cell }
+{\row }
+}
+}}
+{\xe \v spawn\:al::logger_creator}
+{\xe \v al::logger_creator\:spawn}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b logger} {\b al::logger_creator::spawn} (const std::string & {\i name}){\f2  [inline]}}}
+\par
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Generates a new logger with the current list of handlers, the current ignore level and the suppplied name \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+src/logger_creator.hpp\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

@@ -1,0 +1,93 @@
+\hypertarget{classal_1_1logger}{\section{al\-:\-:logger \-Class \-Reference}
+\label{classal_1_1logger}\index{al\-::logger@{al\-::logger}}
+}
+
+
+logger is a class which accepts log messages with the $<$$<$ operator or through a member function called log. \-It then passes the message off to its predetermined handlers.  
+
+
+
+
+{\ttfamily \#include $<$logger.\-hpp$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classal_1_1logger_a1b4657f03e90502d6cc655051d968a64}{logger} (const std\-::list$<$ std\-::shared\-\_\-ptr$<$ \hyperlink{classal_1_1handler}{handler} $>$$>$ \&handlers, level ignore, const std\-::string \&logger\-\_\-name)
+\item 
+void \hyperlink{classal_1_1logger_a4b0997a0f58aa36f7bb3e18826f3bf19}{log} (level, const std\-::string \&)
+\item 
+\hyperlink{classal_1_1logger}{logger} \& \hyperlink{classal_1_1logger_aa95776ee6cf9af0a50ad12da5670f28f}{operator$<$$<$} (level)
+\item 
+\hyperlink{classal_1_1logger}{logger} \& \hyperlink{classal_1_1logger_a3b5dfbc33c27b16367d6154c99f751b2}{operator$<$$<$} (const std\-::string \&)
+\item 
+\hyperlink{classal_1_1logger}{logger} \& \hyperlink{classal_1_1logger_add696d93a24662bc71658703e52e134f}{operator$<$$<$} (\hyperlink{classal_1_1end}{end})
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+logger is a class which accepts log messages with the $<$$<$ operator or through a member function called log. \-It then passes the message off to its predetermined handlers. 
+
+logger 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classal_1_1logger_a1b4657f03e90502d6cc655051d968a64}{\index{al\-::logger@{al\-::logger}!logger@{logger}}
+\index{logger@{logger}!al::logger@{al\-::logger}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf al\-::logger\-::logger} (
+\begin{DoxyParamCaption}
+\item[{const std\-::list$<$ std\-::shared\-\_\-ptr$<$ {\bf handler} $>$$>$ \&}]{handlers, }
+\item[{level}]{ignore, }
+\item[{const std\-::string \&}]{logger\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classal_1_1logger_a1b4657f03e90502d6cc655051d968a64}
+\-This constructs a logger with a list of handlers, an ignore level and a name.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handlers} & \-The list of handlers to be attached to this logger. \\
+\hline
+{\em ignore} & \-The ignore level for the logger. \\
+\hline
+{\em logger\-\_\-name} & \-The name that will appear in logs to identify this class. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classal_1_1logger_a4b0997a0f58aa36f7bb3e18826f3bf19}{\index{al\-::logger@{al\-::logger}!log@{log}}
+\index{log@{log}!al::logger@{al\-::logger}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf logger\-::log} (
+\begin{DoxyParamCaption}
+\item[{level}]{l, }
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{classal_1_1logger_a4b0997a0f58aa36f7bb3e18826f3bf19}
+\-Logs the message with all of the registered handlers \hypertarget{classal_1_1logger_aa95776ee6cf9af0a50ad12da5670f28f}{\index{al\-::logger@{al\-::logger}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!al::logger@{al\-::logger}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} \& logger\-::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{level}]{l}
+\end{DoxyParamCaption}
+)}}\label{classal_1_1logger_aa95776ee6cf9af0a50ad12da5670f28f}
+\-Sets the level of the current message to a new level \hypertarget{classal_1_1logger_a3b5dfbc33c27b16367d6154c99f751b2}{\index{al\-::logger@{al\-::logger}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!al::logger@{al\-::logger}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} \& logger\-::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{input}
+\end{DoxyParamCaption}
+)}}\label{classal_1_1logger_a3b5dfbc33c27b16367d6154c99f751b2}
+\-Appends the string to the current message \hypertarget{classal_1_1logger_add696d93a24662bc71658703e52e134f}{\index{al\-::logger@{al\-::logger}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!al::logger@{al\-::logger}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} \& logger\-::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf end}}]{}
+\end{DoxyParamCaption}
+)}}\label{classal_1_1logger_add696d93a24662bc71658703e52e134f}
+\-Logs the current message
+
+\-Note that here the end object $\ast$$\ast$is a dummy$\ast$$\ast$. \-It has no intrinsic meaning other than to ensure that this overload is called. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/logger.\-hpp\item 
+src/logger.\-cpp\end{DoxyCompactItemize}
