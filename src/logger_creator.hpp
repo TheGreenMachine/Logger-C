@@ -83,5 +83,10 @@ namespace al{
       level ignore_level;
       bool is_timestamped;
   };
+
+  /**
+   * Defines std_creator to be the normal logger_creator
+   */
+  typedef logger_creator<> std_creator;
 }
 #endif

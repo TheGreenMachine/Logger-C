@@ -19,7 +19,7 @@ void rotator::write(const std::string& entry){
     curr_entry = 0;
     rotate();
   }
-    stream<<entry;
+    stream<<entry<<"\n";
 }
 
 void rotator::rotate(){

@@ -42,12 +42,12 @@ namespace al{
     protected:
       virtual std::string to_string(level l){
         switch(l){
-          case level::none: return "none";
-          case level::info: return "info";
-          case level::debug: return "debug";
-          case level::warning: return "warning";
+          case level::none          : return "          none";
+          case level::info          : return "          info";
+          case level::debug         : return "         debug";
+          case level::warning       : return "       warning";
           case level::nonfatal_error: return "nonfatal_error";
-          case level::fatal_error: return "fatal_error";
+          case level::fatal_error   : return "   fatal_error";
         }
       }
   };
