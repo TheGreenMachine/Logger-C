@@ -13,6 +13,7 @@ namespace al{
    * @Class logger_creator
    * @brief This class should be used to specify the settings of a logger or loggers and then to generate them.
    */
+  template<typename T = logger>
   class logger_creator{
     public:
       /**
@@ -71,8 +72,8 @@ namespace al{
        * Generates a new logger with the current list of handlers, the current
        * ignore level and the suppplied name
        */
-      logger spawn(const std::string& name){
-        return logger(handler_list, ignore_level, name, is_timestamped); 
+      T spawn(const std::string& name){
+        return T(handler_list, ignore_level, name, is_timestamped); 
       }
 
 
