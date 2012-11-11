@@ -1,0 +1,81 @@
+\hypertarget{classal_1_1rolling__handler}{\section{al\-:\-:rolling\-\_\-handler \-Class \-Reference}
+\label{classal_1_1rolling__handler}\index{al\-::rolling\-\_\-handler@{al\-::rolling\-\_\-handler}}
+}
+
+
+\-A handler front end for the rotator class.  
+
+
+
+
+{\ttfamily \#include $<$rolling\-\_\-handler.\-hpp$>$}
+
+\-Inheritance diagram for al\-:\-:rolling\-\_\-handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classal_1_1rolling__handler}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classal_1_1rolling__handler_a3794e5b1bca80be34af48a037c6ecf20}{rolling\-\_\-handler} (const std\-::string \&name, size\-\_\-t max\-\_\-e, size\-\_\-t max\-\_\-f)
+\item 
+void \hyperlink{classal_1_1rolling__handler_aaaeaff11945ff3c2a313f465724ad8a7}{handle} (level l, const std\-::string \&name, const std\-::string \&message)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A handler front end for the rotator class. 
+
+\hyperlink{classal_1_1rolling__handler}{rolling\-\_\-handler} 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classal_1_1rolling__handler_a3794e5b1bca80be34af48a037c6ecf20}{\index{al\-::rolling\-\_\-handler@{al\-::rolling\-\_\-handler}!rolling\-\_\-handler@{rolling\-\_\-handler}}
+\index{rolling\-\_\-handler@{rolling\-\_\-handler}!al::rolling_handler@{al\-::rolling\-\_\-handler}}
+\subsubsection[{rolling\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf al\-::rolling\-\_\-handler\-::rolling\-\_\-handler} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{size\-\_\-t}]{max\-\_\-e, }
+\item[{size\-\_\-t}]{max\-\_\-f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classal_1_1rolling__handler_a3794e5b1bca80be34af48a037c6ecf20}
+
+\begin{DoxyParams}{\-Parameters}
+{\em name} & \-The base name for the log files. \\
+\hline
+{\em max\-\_\-e} & \-The maximum number of entries per file. \\
+\hline
+{\em max\-\_\-f} & the maximum number of files. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classal_1_1rolling__handler_aaaeaff11945ff3c2a313f465724ad8a7}{\index{al\-::rolling\-\_\-handler@{al\-::rolling\-\_\-handler}!handle@{handle}}
+\index{handle@{handle}!al::rolling_handler@{al\-::rolling\-\_\-handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf al\-::rolling\-\_\-handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{level}]{l, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{classal_1_1rolling__handler_aaaeaff11945ff3c2a313f465724ad8a7}
+\-Writes the appropriate information in csv form using a rotator. 
+\begin{DoxyParams}{\-Parameters}
+{\em l} & \-The level of the entry. \\
+\hline
+{\em name} & \-The name of the logger which created it. \\
+\hline
+{\em message} & \-The actual message. \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classal_1_1handler_a29a3fb2757d02ed144cb71166aad1dfe}{al\-::handler}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/handlers/rolling\-\_\-handler.\-hpp\end{DoxyCompactItemize}

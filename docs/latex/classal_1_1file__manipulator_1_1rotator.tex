@@ -1,0 +1,66 @@
+\hypertarget{classal_1_1file__manipulator_1_1rotator}{\section{al\-:\-:file\-\_\-manipulator\-:\-:rotator \-Class \-Reference}
+\label{classal_1_1file__manipulator_1_1rotator}\index{al\-::file\-\_\-manipulator\-::rotator@{al\-::file\-\_\-manipulator\-::rotator}}
+}
+
+
+\-A simple class designed so that a circular buffer can be imitated with reasonable speed.  
+
+
+
+
+{\ttfamily \#include $<$rotator.\-hpp$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classal_1_1file__manipulator_1_1rotator_a9953749ef4f0f051fa1fa49e6b8fb008}{rotator} (const std\-::string \&name, size\-\_\-t max\-\_\-e, size\-\_\-t max\-\_\-f)
+\item 
+void \hyperlink{classal_1_1file__manipulator_1_1rotator_abf77ac9d8a3bb89f0feda62b049874ef}{write} (const std\-::string \&entry)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A simple class designed so that a circular buffer can be imitated with reasonable speed. 
+
+rotator \-This takes in strings and writes them into the files name name1 name2 ... namen such that if enough elements are written everything will be renamed and namen will be overwritten with new entries. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classal_1_1file__manipulator_1_1rotator_a9953749ef4f0f051fa1fa49e6b8fb008}{\index{al\-::file\-\_\-manipulator\-::rotator@{al\-::file\-\_\-manipulator\-::rotator}!rotator@{rotator}}
+\index{rotator@{rotator}!al::file_manipulator::rotator@{al\-::file\-\_\-manipulator\-::rotator}}
+\subsubsection[{rotator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rotator\-::rotator} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{size\-\_\-t}]{max\-\_\-e, }
+\item[{size\-\_\-t}]{max\-\_\-f}
+\end{DoxyParamCaption}
+)}}\label{classal_1_1file__manipulator_1_1rotator_a9953749ef4f0f051fa1fa49e6b8fb008}
+
+\begin{DoxyParams}{\-Parameters}
+{\em name} & \-The name that files will formed on. \\
+\hline
+{\em max\-\_\-e} & \-The maximum number of entries in 1 file. \\
+\hline
+{\em max\-\_\-f} & \-The maximum number of files. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classal_1_1file__manipulator_1_1rotator_abf77ac9d8a3bb89f0feda62b049874ef}{\index{al\-::file\-\_\-manipulator\-::rotator@{al\-::file\-\_\-manipulator\-::rotator}!write@{write}}
+\index{write@{write}!al::file_manipulator::rotator@{al\-::file\-\_\-manipulator\-::rotator}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rotator\-::write} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{entry}
+\end{DoxyParamCaption}
+)}}\label{classal_1_1file__manipulator_1_1rotator_abf77ac9d8a3bb89f0feda62b049874ef}
+\-Takes in a string and writes it to the correct file. \-Renaming files as needed. 
+\begin{DoxyParams}{\-Parameters}
+{\em entry} & \-The string which will be written to the appropriate file. \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/handlers/file\-\_\-manipulators/rotator.\-hpp\item 
+src/handlers/file\-\_\-manipulators/rotator.\-cpp\end{DoxyCompactItemize}

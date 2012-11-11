@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Al: al::cerr_handler Class Reference</title>
+<title>Al: al::file_manipulator::rotator Class Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -94,36 +94,104 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><b>al</b>      </li>
-      <li class="navelem"><a class="el" href="classal_1_1cerr__handler.html">cerr_handler</a>      </li>
+      <li class="navelem"><b>file_manipulator</b>      </li>
+      <li class="navelem"><a class="el" href="classal_1_1file__manipulator_1_1rotator.html">rotator</a>      </li>
     </ul>
   </div>
 </div>
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">al::cerr_handler Class Reference</div>  </div>
+<div class="title">al::file_manipulator::rotator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="al::cerr_handler" --><!-- doxytag: inherits="al::handler" -->
-<p>A simple handler, it prints all log entries to cerr.  
- <a href="classal_1_1cerr__handler.html#details">More...</a></p>
+<!-- doxytag: class="al::file_manipulator::rotator" -->
+<p>A simple class designed so that a circular buffer can be imitated with reasonable speed.  
+ <a href="classal_1_1file__manipulator_1_1rotator.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="cerr__handler_8hpp_source.html">cerr_handler.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for al::cerr_handler:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="classal_1_1cerr__handler.png" usemap="#al::cerr_handler_map" alt=""/>
-  <map id="al::cerr_handler_map" name="al::cerr_handler_map">
-<area href="classal_1_1handler.html" title="An abstract base class for all handler classes." alt="al::handler" shape="rect" coords="0,0,102,24"/>
-</map>
- </div></div>
+<p><code>#include &lt;<a class="el" href="rotator_8hpp_source.html">rotator.hpp</a>&gt;</code></p>
 
-<p><a href="classal_1_1cerr__handler-members.html">List of all members.</a></p>
+<p><a href="classal_1_1file__manipulator_1_1rotator-members.html">List of all members.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1file__manipulator_1_1rotator.html#a9953749ef4f0f051fa1fa49e6b8fb008">rotator</a> (const std::string &amp;name, size_t max_e, size_t max_f)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1file__manipulator_1_1rotator.html#abf77ac9d8a3bb89f0feda62b049874ef">write</a> (const std::string &amp;entry)</td></tr>
+</table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>A simple handler, it prints all log entries to cerr. </p>
-<p>cerr_handle The messages are of the form "(level) name : message" for easy readability. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/handlers/<a class="el" href="cerr__handler_8hpp_source.html">cerr_handler.hpp</a></li>
+<div class="textblock"><p>A simple class designed so that a circular buffer can be imitated with reasonable speed. </p>
+<p>rotator This takes in strings and writes them into the files name name1 name2 ... namen such that if enough elements are written everything will be renamed and namen will be overwritten with new entries. </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a9953749ef4f0f051fa1fa49e6b8fb008"></a><!-- doxytag: member="al::file_manipulator::rotator::rotator" ref="a9953749ef4f0f051fa1fa49e6b8fb008" args="(const std::string &amp;name, size_t max_e, size_t max_f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classal_1_1file__manipulator_1_1rotator.html#a9953749ef4f0f051fa1fa49e6b8fb008">rotator::rotator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max_e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max_f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name that files will formed on. </td></tr>
+    <tr><td class="paramname">max_e</td><td>The maximum number of entries in 1 file. </td></tr>
+    <tr><td class="paramname">max_f</td><td>The maximum number of files. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="abf77ac9d8a3bb89f0feda62b049874ef"></a><!-- doxytag: member="al::file_manipulator::rotator::write" ref="abf77ac9d8a3bb89f0feda62b049874ef" args="(const std::string &amp;entry)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classal_1_1file__manipulator_1_1rotator.html#abf77ac9d8a3bb89f0feda62b049874ef">rotator::write</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Takes in a string and writes it to the correct file. Renaming files as needed. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td>The string which will be written to the appropriate file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>src/handlers/file_manipulators/<a class="el" href="rotator_8hpp_source.html">rotator.hpp</a></li>
+<li>src/handlers/file_manipulators/rotator.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- window showing the filter options -->

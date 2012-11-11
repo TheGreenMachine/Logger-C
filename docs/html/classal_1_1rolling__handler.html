@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Al: al::file_handler Class Reference</title>
+<title>Al: al::rolling_handler Class Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><b>al</b>      </li>
-      <li class="navelem"><a class="el" href="classal_1_1file__handler.html">file_handler</a>      </li>
+      <li class="navelem"><a class="el" href="classal_1_1rolling__handler.html">rolling_handler</a>      </li>
     </ul>
   </div>
 </div>
@@ -102,58 +102,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">al::file_handler Class Reference</div>  </div>
+<div class="title">al::rolling_handler Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="al::file_handler" --><!-- doxytag: inherits="al::handler" -->
-<p>The classic file logger, based on std::ofstream.  
- <a href="classal_1_1file__handler.html#details">More...</a></p>
+<!-- doxytag: class="al::rolling_handler" --><!-- doxytag: inherits="al::handler" -->
+<p>A handler front end for the rotator class.  
+ <a href="classal_1_1rolling__handler.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="file__handler_8hpp_source.html">file_handler.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="rolling__handler_8hpp_source.html">rolling_handler.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for al::file_handler:</div>
+Inheritance diagram for al::rolling_handler:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classal_1_1file__handler.png" usemap="#al::file_handler_map" alt=""/>
-  <map id="al::file_handler_map" name="al::file_handler_map">
-<area href="classal_1_1handler.html" title="An abstract base class for all handler classes." alt="al::handler" shape="rect" coords="0,0,95,24"/>
+  <img src="classal_1_1rolling__handler.png" usemap="#al::rolling_handler_map" alt=""/>
+  <map id="al::rolling_handler_map" name="al::rolling_handler_map">
+<area href="classal_1_1handler.html" title="An abstract base class for all handler classes." alt="al::handler" shape="rect" coords="0,0,113,24"/>
 </map>
  </div></div>
 
-<p><a href="classal_1_1file__handler-members.html">List of all members.</a></p>
+<p><a href="classal_1_1rolling__handler-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1file__handler.html#a77f69cc57230734c01c160989c0e3664">file_handler</a> (const std::string &amp;file)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1file__handler.html#a5de57304a22107e403c1ac917001da38">handle</a> (level, const std::string &amp;, const std::string &amp;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1rolling__handler.html#a3794e5b1bca80be34af48a037c6ecf20">rolling_handler</a> (const std::string &amp;name, size_t max_e, size_t max_f)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1rolling__handler.html#aaaeaff11945ff3c2a313f465724ad8a7">handle</a> (level l, const std::string &amp;name, const std::string &amp;message)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>The classic file logger, based on std::ofstream. </p>
-<p><a class="el" href="classal_1_1file__handler.html" title="The classic file logger, based on std::ofstream.">file_handler</a> </p>
+<div class="textblock"><p>A handler front end for the rotator class. </p>
+<p><a class="el" href="classal_1_1rolling__handler.html" title="A handler front end for the rotator class.">rolling_handler</a> </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a77f69cc57230734c01c160989c0e3664"></a><!-- doxytag: member="al::file_handler::file_handler" ref="a77f69cc57230734c01c160989c0e3664" args="(const std::string &amp;file)" -->
+<a class="anchor" id="a3794e5b1bca80be34af48a037c6ecf20"></a><!-- doxytag: member="al::rolling_handler::rolling_handler" ref="a3794e5b1bca80be34af48a037c6ecf20" args="(const std::string &amp;name, size_t max_e, size_t max_f)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classal_1_1file__handler.html#a77f69cc57230734c01c160989c0e3664">file_handler::file_handler</a> </td>
+          <td class="memname"><a class="el" href="classal_1_1rolling__handler.html#a3794e5b1bca80be34af48a037c6ecf20">al::rolling_handler::rolling_handler</a> </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max_e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max_f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">file</td><td>The file name for the log file. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>If the file is unable to be opened. </td></tr>
+    <tr><td class="paramname">name</td><td>The base name for the log files. </td></tr>
+    <tr><td class="paramname">max_e</td><td>The maximum number of entries per file. </td></tr>
+    <tr><td class="paramname">max_f</td><td>the maximum number of files. </td></tr>
   </table>
   </dd>
 </dl>
@@ -161,12 +173,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a5de57304a22107e403c1ac917001da38"></a><!-- doxytag: member="al::file_handler::handle" ref="a5de57304a22107e403c1ac917001da38" args="(level, const std::string &amp;, const std::string &amp;)" -->
+<a class="anchor" id="aaaeaff11945ff3c2a313f465724ad8a7"></a><!-- doxytag: member="al::rolling_handler::handle" ref="aaaeaff11945ff3c2a313f465724ad8a7" args="(level l, const std::string &amp;name, const std::string &amp;message)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classal_1_1file__handler.html#a5de57304a22107e403c1ac917001da38">file_handler::handle</a> </td>
+          <td class="memname">void <a class="el" href="classal_1_1rolling__handler.html#aaaeaff11945ff3c2a313f465724ad8a7">al::rolling_handler::handle</a> </td>
           <td>(</td>
           <td class="paramtype">level&#160;</td>
           <td class="paramname"><em>l</em>, </td>
@@ -186,21 +198,27 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [virtual]</code></td>
+          <td></td><td><code> [inline, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Prints the message to the log file in csv form.</p>
-<p>"level,name,message" </p>
+<p>Writes the appropriate information in csv form using a rotator. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The level of the entry. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the logger which created it. </td></tr>
+    <tr><td class="paramname">message</td><td>The actual message. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classal_1_1handler.html#a29a3fb2757d02ed144cb71166aad1dfe">al::handler</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/handlers/<a class="el" href="file__handler_8hpp_source.html">file_handler.hpp</a></li>
-<li>src/handlers/file_handler.cpp</li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>src/handlers/<a class="el" href="rolling__handler_8hpp_source.html">rolling_handler.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- window showing the filter options -->
