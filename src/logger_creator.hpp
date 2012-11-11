@@ -13,7 +13,7 @@ namespace al{
    * @Class logger_creator
    * @brief This class should be used to specify the settings of a logger or loggers and then to generate them.
    */
-  template<typename T = logger>
+  template<typename T>
   class logger_creator{
     public:
       /**
@@ -87,6 +87,6 @@ namespace al{
   /**
    * Defines std_creator to be the normal logger_creator
    */
-  typedef logger_creator<> std_creator;
+  typedef logger_creator<logger> std_creator;
 }
 #endif
