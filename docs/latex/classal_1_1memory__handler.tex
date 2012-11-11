@@ -1,0 +1,86 @@
+\hypertarget{classal_1_1memory__handler}{\section{al\-:\-:memory\-\_\-handler \-Class \-Reference}
+\label{classal_1_1memory__handler}\index{al\-::memory\-\_\-handler@{al\-::memory\-\_\-handler}}
+}
+
+
+\-An in memory handler that flushes its entries to a specified handler on its destruction.  
+
+
+
+
+{\ttfamily \#include $<$memory\-\_\-handler.\-hpp$>$}
+
+\-Inheritance diagram for al\-:\-:memory\-\_\-handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classal_1_1memory__handler}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries log\-\_\-entry}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classal_1_1memory__handler_a74331eb896c73e46e9d8da1ab8443b32}{memory\-\_\-handler} (size\-\_\-t bsize, std\-::shared\-\_\-ptr$<$ \hyperlink{classal_1_1handler}{handler} $>$ exit)
+\item 
+void \hyperlink{classal_1_1memory__handler_ac7d78c5cee952f2934b12e26f4f271eb}{handle} (level, const std\-::string \&, const std\-::string \&)
+\item 
+\hyperlink{classal_1_1memory__handler_a09887d99cbdaea2db862a92b9d1edd7c}{$\sim$memory\-\_\-handler} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-An in memory handler that flushes its entries to a specified handler on its destruction. 
+
+\hyperlink{classal_1_1memory__handler}{memory\-\_\-handler} 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classal_1_1memory__handler_a74331eb896c73e46e9d8da1ab8443b32}{\index{al\-::memory\-\_\-handler@{al\-::memory\-\_\-handler}!memory\-\_\-handler@{memory\-\_\-handler}}
+\index{memory\-\_\-handler@{memory\-\_\-handler}!al::memory_handler@{al\-::memory\-\_\-handler}}
+\subsubsection[{memory\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memory\-\_\-handler\-::memory\-\_\-handler} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{bsize, }
+\item[{std\-::shared\-\_\-ptr$<$ {\bf handler} $>$}]{exit}
+\end{DoxyParamCaption}
+)}}\label{classal_1_1memory__handler_a74331eb896c73e46e9d8da1ab8443b32}
+
+\begin{DoxyParams}{\-Parameters}
+{\em bsize} & \-The maximum number of entries to store in memory. \\
+\hline
+{\em exit} & \-The handler which should be invoked on this objects destruction. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classal_1_1memory__handler_a09887d99cbdaea2db862a92b9d1edd7c}{\index{al\-::memory\-\_\-handler@{al\-::memory\-\_\-handler}!$\sim$memory\-\_\-handler@{$\sim$memory\-\_\-handler}}
+\index{$\sim$memory\-\_\-handler@{$\sim$memory\-\_\-handler}!al::memory_handler@{al\-::memory\-\_\-handler}}
+\subsubsection[{$\sim$memory\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memory\-\_\-handler\-::$\sim$memory\-\_\-handler} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classal_1_1memory__handler_a09887d99cbdaea2db862a92b9d1edd7c}
+\-Passes every entry in the buffer to the specified handler.
+
+\-If an exception is thrown, it is caught silently and the destructor returns. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classal_1_1memory__handler_ac7d78c5cee952f2934b12e26f4f271eb}{\index{al\-::memory\-\_\-handler@{al\-::memory\-\_\-handler}!handle@{handle}}
+\index{handle@{handle}!al::memory_handler@{al\-::memory\-\_\-handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf memory\-\_\-handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{level}]{l, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classal_1_1memory__handler_ac7d78c5cee952f2934b12e26f4f271eb}
+\-Stores the entry in memory (currently a std\-::deque). \-If the number of entries exceeds the expected maximum amount, the oldest is deleted. 
+
+\-Implements \hyperlink{classal_1_1handler_a29a3fb2757d02ed144cb71166aad1dfe}{al\-::handler}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/handlers/memory\-\_\-handler.\-hpp\item 
+src/handlers/memory\-\_\-handler.\-cpp\end{DoxyCompactItemize}

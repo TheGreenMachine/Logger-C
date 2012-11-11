@@ -1,0 +1,74 @@
+\hypertarget{classal_1_1file__handler}{\section{al\-:\-:file\-\_\-handler \-Class \-Reference}
+\label{classal_1_1file__handler}\index{al\-::file\-\_\-handler@{al\-::file\-\_\-handler}}
+}
+
+
+\-The classic file logger, based on std\-::ofstream.  
+
+
+
+
+{\ttfamily \#include $<$file\-\_\-handler.\-hpp$>$}
+
+\-Inheritance diagram for al\-:\-:file\-\_\-handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classal_1_1file__handler}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classal_1_1file__handler_a77f69cc57230734c01c160989c0e3664}{file\-\_\-handler} (const std\-::string \&file)
+\item 
+void \hyperlink{classal_1_1file__handler_a5de57304a22107e403c1ac917001da38}{handle} (level, const std\-::string \&, const std\-::string \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-The classic file logger, based on std\-::ofstream. 
+
+\hyperlink{classal_1_1file__handler}{file\-\_\-handler} 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classal_1_1file__handler_a77f69cc57230734c01c160989c0e3664}{\index{al\-::file\-\_\-handler@{al\-::file\-\_\-handler}!file\-\_\-handler@{file\-\_\-handler}}
+\index{file\-\_\-handler@{file\-\_\-handler}!al::file_handler@{al\-::file\-\_\-handler}}
+\subsubsection[{file\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf file\-\_\-handler\-::file\-\_\-handler} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file}
+\end{DoxyParamCaption}
+)}}\label{classal_1_1file__handler_a77f69cc57230734c01c160989c0e3664}
+
+\begin{DoxyParams}{\-Parameters}
+{\em file} & \-The file name for the log file. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em std\-::runtime\-\_\-error} & \-If the file is unable to be opened. \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classal_1_1file__handler_a5de57304a22107e403c1ac917001da38}{\index{al\-::file\-\_\-handler@{al\-::file\-\_\-handler}!handle@{handle}}
+\index{handle@{handle}!al::file_handler@{al\-::file\-\_\-handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf file\-\_\-handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{level}]{l, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classal_1_1file__handler_a5de57304a22107e403c1ac917001da38}
+\-Prints the message to the log file in csv form.
+
+\char`\"{}level,name,message\char`\"{} 
+
+\-Implements \hyperlink{classal_1_1handler_a29a3fb2757d02ed144cb71166aad1dfe}{al\-::handler}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/handlers/file\-\_\-handler.\-hpp\item 
+src/handlers/file\-\_\-handler.\-cpp\end{DoxyCompactItemize}
