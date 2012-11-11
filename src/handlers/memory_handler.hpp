@@ -29,6 +29,16 @@ namespace al{
        * Stores the entry in memory (currently a std::deque).
        * If the number of entries exceeds the expected maximum amount, the oldest is deleted.
        */
+      void handle(const std::string&);
+      /**
+       * Stores the entry in memory (currently a std::deque).
+       * If the number of entries exceeds the expected maximum amount, the oldest is deleted.
+       */
+      void handle(level,const std::string&,const std::string&,const std::string&);
+      /**
+       * Stores the entry in memory (currently a std::deque).
+       * If the number of entries exceeds the expected maximum amount, the oldest is deleted.
+       */
       void handle(level,const std::string&,const std::string&);
 
       /**
@@ -40,9 +50,24 @@ namespace al{
     private:
 
       struct log_entry{
+
         log_entry(level lev, const std::string& n, const std::string& m)
-          :l(lev), name(n), message(m) {}
+          :type(message_type::name_stamped), l(lev), name(n), message(m) {}
+
+        log_entry(level lev, const std::string& t, const std::string& n, const std::string& m)
+          :type(message_type::time_stamped), l(lev),time(t), name(n), message(m) {}
+
+        log_entry(const std::string& m)
+          :type(message_type::raw), message(m) {}
+
+        enum class message_type {
+          name_stamped,
+          time_stamped,
+          raw
+        } type;
+
         level l;
+        const std::string time;
         const std::string name;
         const std::string message;
       };

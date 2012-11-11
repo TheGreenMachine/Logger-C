@@ -19,7 +19,7 @@ namespace al{
        * creates a default logger, the initial ignore level is none
        * 
        */
-      logger_creator():ignore_level(level::none) {}
+      logger_creator():ignore_level(level::none),is_timestamped(true) {}
 
       /**
        * This adds a new handler to the list of handlers. This will NOT
@@ -33,8 +33,26 @@ namespace al{
         return *this;
       }
 
+      /**
+       * This adds a new handler to the list of handlers. This will NOT
+       * affect previously generated loggers, but will affect any loggers
+       * generated after this call.
+       *
+       * @param new_handler The handler that will be added.
+       */
       logger_creator& add_handler(handler* new_handler){
         handler_list.emplace_back(new_handler);
+        return *this;
+      }
+
+      /**
+       * Decides whether log entries should have a time stamp on any loggers generated after this call.
+       * It will NOT affect any previously created loggers.
+       *
+       * @param t true if there should be a timestamp
+       */
+      logger_creator& timestamped(bool t){
+        is_timestamped = t;
         return *this;
       }
 
@@ -54,7 +72,7 @@ namespace al{
        * ignore level and the suppplied name
        */
       logger spawn(const std::string& name){
-        return logger(handler_list, ignore_level, name); 
+        return logger(handler_list, ignore_level, name, is_timestamped); 
       }
 
 
@@ -62,6 +80,7 @@ namespace al{
     protected:
       std::list<std::shared_ptr<handler>> handler_list;
       level ignore_level;
+      bool is_timestamped;
   };
 }
 #endif

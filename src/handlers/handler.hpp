@@ -12,6 +12,7 @@ namespace al{
    */
   class handler{
     public:
+
       /**
        * This is the method called to handle a log entry.
        * @param l The level of the entry.
@@ -19,6 +20,23 @@ namespace al{
        * @param message The actual text of the entry
        */
       virtual void handle(level l, const std::string& name, const std::string& message)=0;
+
+      /**
+       * This is the method called to handle a log entry. It handles timestamps.
+       * @param l The level of the entry.
+       * @param name The name of the logger that generated it.
+       * @param timestamp The time indicating when the log message was entered.
+       * @param message The actual text of the entry
+       */
+      virtual void handle(level l, const std::string& name,
+          const std::string& timestamp, const std::string& message)=0;
+
+      /**
+       * This is the method called to handle a log entry. It is meant for people who want a custom log format.
+       * @param message The raw text of the entry
+       */
+      virtual void handle(const std::string& message)=0;
+
 
       virtual ~handler(){}
     protected:

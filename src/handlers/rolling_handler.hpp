@@ -22,6 +22,24 @@ namespace al{
 
       /**
        * Writes the appropriate information in csv form using a rotator.
+       * @param message The raw message.
+       */
+      void handle(const std::string& message){
+        rotate.write(message);
+      }
+
+      /**
+       * Writes the appropriate information in csv form using a rotator.
+       * @param l The level of the entry.
+       * @param timestamp The timestamp of the entry
+       * @param name The name of the logger which created it.
+       * @param message The actual message.
+       */
+      void handle(level l, const std::string& timestamp, const std::string& name, const std::string& message){
+        rotate.write(to_string(l)+","+timestamp+","+name+","+message);
+      }
+      /**
+       * Writes the appropriate information in csv form using a rotator.
        * @param l The level of the entry.
        * @param name The name of the logger which created it.
        * @param message The actual message.

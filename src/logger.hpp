@@ -30,25 +30,27 @@ namespace al{
        * @param handlers The list of handlers to be attached to this logger.
        * @param ignore The ignore level for the logger.
        * @param logger_name The name that will appear in logs to identify this class.
+       * @param t Determines whether the logger is timestamped.
        */
       logger(const std::list<std::shared_ptr<handler>>& handlers, level ignore,
-          const std::string& logger_name):
-        ignore_level(ignore), handler_list(handlers), name(logger_name), current_level(level::info){}
+          const std::string& logger_name, bool t):
+        ignore_level(ignore), handler_list(handlers), name(logger_name),
+        is_timestamped(t), current_level(level::info){}
 
       /**
        * Logs the message with all of the registered handlers
        */
-      void log(level, const std::string&);
+      virtual void log(level, const std::string&);
 
       /**
        * Sets the level of the current message to a new level
        */
-      logger& operator<<(level);
+      virtual logger& operator<<(level);
 
       /**
        * Appends the string to the current message
        */
-      logger& operator<<(const std::string&);
+      virtual logger& operator<<(const std::string&);
 
       /**
        * Logs the current message
@@ -56,13 +58,18 @@ namespace al{
        * Note that here the end object **is a dummy**. It has no intrinsic meaning other than to
        * ensure that this overload is called.
        */
-      logger& operator<<(end);
+      virtual logger& operator<<(end);
 
       virtual ~logger(){}
+    protected: 
+
+      const std::string get_timestamp();
+
     private:
-        level ignore_level;
+        const level ignore_level;
         const std::list<std::shared_ptr<handler>>& handler_list;
         const std::string name;
+        const bool is_timestamped;
 
         std::string message;
         level current_level;

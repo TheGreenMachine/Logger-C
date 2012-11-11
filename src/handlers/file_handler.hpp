@@ -20,9 +20,23 @@ namespace al{
       /**
        * Prints the message to the log file in csv form.
        *
+       * "level,time,name,message"
+       */
+      void handle(level, const std::string&, const std::string&, const std::string&);
+
+      /**
+       * Prints the message to the log file in csv form.
+       *
        * "level,name,message"
        */
       void handle(level, const std::string&, const std::string&);
+
+      /**
+       * Prints the message to the log file in csv form.
+       *
+       * "message"
+       */
+      void handle(const std::string&);
 
     private:
       std::ofstream stream;
