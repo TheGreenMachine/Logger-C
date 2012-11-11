@@ -20,6 +20,12 @@ namespace al{
       memory_handler(size_t bsize,std::shared_ptr<handler> exit);
 
       /**
+       * @param bsize The maximum number of entries to store in memory.
+       * @param exit The handler which should be invoked on this objects destruction.
+       */
+      memory_handler(size_t bsize,handler* exit);
+
+      /**
        * Stores the entry in memory (currently a std::deque).
        * If the number of entries exceeds the expected maximum amount, the oldest is deleted.
        */

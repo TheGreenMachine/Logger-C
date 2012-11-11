@@ -33,6 +33,11 @@ namespace al{
         return *this;
       }
 
+      logger_creator& add_handler(handler* new_handler){
+        handler_list.emplace_back(new_handler);
+        return *this;
+      }
+
       /**
        * This sets the ignore level on any loggers generated after this call.
        * It will NOT affect any previously created loggers.
