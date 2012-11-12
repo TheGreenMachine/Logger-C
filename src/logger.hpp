@@ -67,7 +67,7 @@ namespace al{
 
     private:
         const level ignore_level;
-        const std::list<std::shared_ptr<handler>>& handler_list;
+        const std::list<std::shared_ptr<handler>> handler_list;
         const std::string name;
         const bool is_timestamped;
 
