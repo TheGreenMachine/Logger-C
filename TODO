@@ -1,0 +1,9 @@
+Currently this logger works, however it is only compilable with a C++11 compiler.
+
+In order to make it compatible for FIRST, the remaining objectives are:
+
+    1. Write a reference counting smart pointer to replaced std::shared_ptr
+    2. Remove the C++11 features added (Such as strongly typed enums).
+    3. Design a utility similar to make_shared. There are potential problems here without
+        variadic templates, type safety may be impossible.
+    4. Add multiple examples for use.
