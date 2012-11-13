@@ -17,7 +17,7 @@ namespace al{
     info,
     warning,
     nonfatal_error,
-    fatal_error,
+    fatal_error
   };
 }
 
