@@ -118,9 +118,10 @@ Inheritance diagram for al::handler:</div>
   <img src="classal_1_1handler.png" usemap="#al::handler_map" alt=""/>
   <map id="al::handler_map" name="al::handler_map">
 <area href="classal_1_1cerr__handler.html" title="A simple handler, it prints all log entries to cerr." alt="al::cerr_handler" shape="rect" coords="0,56,122,80"/>
-<area href="classal_1_1file__handler.html" title="The classic file logger, based on std::ofstream." alt="al::file_handler" shape="rect" coords="132,56,254,80"/>
-<area href="classal_1_1memory__handler.html" title="An in memory handler that flushes its entries to a specified handler on its destruction." alt="al::memory_handler" shape="rect" coords="264,56,386,80"/>
-<area href="classal_1_1rolling__handler.html" title="A handler front end for the rotator class." alt="al::rolling_handler" shape="rect" coords="396,56,518,80"/>
+<area href="classal_1_1cerr__handler.html" title="A simple handler, it prints all log entries to cerr." alt="al::cerr_handler" shape="rect" coords="132,56,254,80"/>
+<area href="classal_1_1file__handler.html" title="The classic file logger, based on std::ofstream." alt="al::file_handler" shape="rect" coords="264,56,386,80"/>
+<area href="classal_1_1memory__handler.html" title="An in memory handler that flushes its entries to a specified handler on its destruction." alt="al::memory_handler" shape="rect" coords="396,56,518,80"/>
+<area href="classal_1_1rolling__handler.html" title="A handler front end for the rotator class." alt="al::rolling_handler" shape="rect" coords="528,56,650,80"/>
 </map>
  </div></div>
 
@@ -129,10 +130,11 @@ Inheritance diagram for al::handler:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1handler.html#a29a3fb2757d02ed144cb71166aad1dfe">handle</a> (level l, const std::string &amp;name, const std::string &amp;message)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1handler.html#a11ebca923dc7a3f8ffa3f802c5598cb0">handle</a> (level l, const std::string &amp;name, const std::string &amp;timestamp, const std::string &amp;message)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1handler.html#af041d0c1de7e49607e27572f73413e82">handle</a> (const std::string &amp;message)=0</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46745146bc6348c43f6fd469df59ef2a"></a><!-- doxytag: member="al::handler::to_string" ref="a46745146bc6348c43f6fd469df59ef2a" args="(level l)" -->
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> (level l)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1handler.html#a46745146bc6348c43f6fd469df59ef2a">to_string</a> (level l)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>An abstract base class for all handler classes. </p>
@@ -178,7 +180,102 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_str
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classal_1_1rolling__handler.html#aaaeaff11945ff3c2a313f465724ad8a7">al::rolling_handler</a>, <a class="el" href="classal_1_1memory__handler.html#ac7d78c5cee952f2934b12e26f4f271eb">al::memory_handler</a>, and <a class="el" href="classal_1_1file__handler.html#a5de57304a22107e403c1ac917001da38">al::file_handler</a>.</p>
+<p>Implemented in <a class="el" href="classal_1_1rolling__handler.html#aaaeaff11945ff3c2a313f465724ad8a7">al::rolling_handler</a>, <a class="el" href="classal_1_1memory__handler.html#ac7d78c5cee952f2934b12e26f4f271eb">al::memory_handler</a>, <a class="el" href="classal_1_1file__handler.html#a5de57304a22107e403c1ac917001da38">al::file_handler</a>, <a class="el" href="classal_1_1cerr__handler.html#aec62acaf51e9a5046ef300fe6787d1aa">al::cerr_handler</a>, and <a class="el" href="classal_1_1cerr__handler.html#aec62acaf51e9a5046ef300fe6787d1aa">al::cerr_handler</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a11ebca923dc7a3f8ffa3f802c5598cb0"></a><!-- doxytag: member="al::handler::handle" ref="a11ebca923dc7a3f8ffa3f802c5598cb0" args="(level l, const std::string &amp;name, const std::string &amp;timestamp, const std::string &amp;message)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classal_1_1handler.html#a29a3fb2757d02ed144cb71166aad1dfe">al::handler::handle</a> </td>
+          <td>(</td>
+          <td class="paramtype">level&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>timestamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>This is the method called to handle a log entry. It handles timestamps. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The level of the entry. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the logger that generated it. </td></tr>
+    <tr><td class="paramname">timestamp</td><td>The time indicating when the log message was entered. </td></tr>
+    <tr><td class="paramname">message</td><td>The actual text of the entry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classal_1_1rolling__handler.html#a7be82c1cfe439d591d50dc83eeea35c8">al::rolling_handler</a>, <a class="el" href="classal_1_1memory__handler.html#a5d2bda991fb466cf804fbd0646f21eea">al::memory_handler</a>, <a class="el" href="classal_1_1file__handler.html#a1376091820f51db3ef0423b0e39a9680">al::file_handler</a>, <a class="el" href="classal_1_1cerr__handler.html#a70dcc4ff1a54a3af30a62e70eb1ec4a5">al::cerr_handler</a>, and <a class="el" href="classal_1_1cerr__handler.html#a70dcc4ff1a54a3af30a62e70eb1ec4a5">al::cerr_handler</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af041d0c1de7e49607e27572f73413e82"></a><!-- doxytag: member="al::handler::handle" ref="af041d0c1de7e49607e27572f73413e82" args="(const std::string &amp;message)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classal_1_1handler.html#a29a3fb2757d02ed144cb71166aad1dfe">al::handler::handle</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>This is the method called to handle a log entry. It is meant for people who want a custom log format. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The raw text of the entry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classal_1_1file__handler.html#a1d02c57ba2bb955c4a2ecf6886b96756">al::file_handler</a>, <a class="el" href="classal_1_1memory__handler.html#a6e8ccdb9752f787cedd61576c8758298">al::memory_handler</a>, <a class="el" href="classal_1_1rolling__handler.html#a70bcaa16809070c914baa628a51650fb">al::rolling_handler</a>, <a class="el" href="classal_1_1cerr__handler.html#adc5f179798baf0a4c6a53a539814b4db">al::cerr_handler</a>, and <a class="el" href="classal_1_1cerr__handler.html#adc5f179798baf0a4c6a53a539814b4db">al::cerr_handler</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a46745146bc6348c43f6fd469df59ef2a"></a><!-- doxytag: member="al::handler::to_string" ref="a46745146bc6348c43f6fd469df59ef2a" args="(level l)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string <a class="el" href="classal_1_1handler.html#a46745146bc6348c43f6fd469df59ef2a">al::handler::to_string</a> </td>
+          <td>(</td>
+          <td class="paramtype">level&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td><code> [inline, protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Potentially throws runtime_error if an unrecognized option is passed. Should be impossible </p>
 
 </div>
 </div>
@@ -203,7 +300,7 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_str
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 11 2012 00:17:01 for Al by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 12 2012 18:40:49 for Al by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

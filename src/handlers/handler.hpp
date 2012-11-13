@@ -2,6 +2,7 @@
 #define HANDLER_H
 
 #include <string>
+#include <stdexcept>
 #include "../levels.hpp"
 
 namespace al{
@@ -40,6 +41,10 @@ namespace al{
 
       virtual ~handler(){}
     protected:
+      /**
+       * Potentially throws runtime_error if an unrecognized option is passed.
+       * Should be impossible
+       */
       virtual std::string to_string(level l){
         switch(l){
           case level::none          : return "          none";
@@ -48,7 +53,9 @@ namespace al{
           case level::warning       : return "       warning";
           case level::nonfatal_error: return "nonfatal_error";
           case level::fatal_error   : return "   fatal_error";
+          default: throw std::runtime_error("Unrecognized type");
         }
+        return "";
       }
   };
 }

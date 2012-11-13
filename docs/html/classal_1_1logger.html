@@ -100,7 +100,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">al::logger Class Reference</div>  </div>
 </div><!--header-->
@@ -115,22 +116,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger.html#a1b4657f03e90502d6cc655051d968a64">logger</a> (const std::list&lt; std::shared_ptr&lt; <a class="el" href="classal_1_1handler.html">handler</a> &gt;&gt; &amp;handlers, level ignore, const std::string &amp;logger_name)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger.html#a4b0997a0f58aa36f7bb3e18826f3bf19">log</a> (level, const std::string &amp;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classal_1_1logger.html">logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger.html#aa95776ee6cf9af0a50ad12da5670f28f">operator&lt;&lt;</a> (level)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classal_1_1logger.html">logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger.html#a3b5dfbc33c27b16367d6154c99f751b2">operator&lt;&lt;</a> (const std::string &amp;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classal_1_1logger.html">logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger.html#add696d93a24662bc71658703e52e134f">operator&lt;&lt;</a> (<a class="el" href="classal_1_1end.html">end</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger.html#a3cadf9937463b65343f29459a59bf564">logger</a> (const std::list&lt; std::shared_ptr&lt; <a class="el" href="classal_1_1handler.html">handler</a> &gt;&gt; &amp;handlers, level ignore, const std::string &amp;logger_name, bool t)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger.html#a4b0997a0f58aa36f7bb3e18826f3bf19">log</a> (level, const std::string &amp;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classal_1_1logger.html">logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger.html#aa95776ee6cf9af0a50ad12da5670f28f">operator&lt;&lt;</a> (level)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classal_1_1logger.html">logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger.html#a3b5dfbc33c27b16367d6154c99f751b2">operator&lt;&lt;</a> (const std::string &amp;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classal_1_1logger.html">logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger.html#add696d93a24662bc71658703e52e134f">operator&lt;&lt;</a> (<a class="el" href="classal_1_1end.html">end</a>)</td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5016f7ad5c219d820d801bd70dd9d6d1"></a><!-- doxytag: member="al::logger::get_timestamp" ref="a5016f7ad5c219d820d801bd70dd9d6d1" args="()" -->
+const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_timestamp</b> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>logger is a class which accepts log messages with the &lt;&lt; operator or through a member function called log. It then passes the message off to its predetermined handlers. </p>
 <p>logger </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a1b4657f03e90502d6cc655051d968a64"></a><!-- doxytag: member="al::logger::logger" ref="a1b4657f03e90502d6cc655051d968a64" args="(const std::list&lt; std::shared_ptr&lt; handler &gt;&gt; &amp;handlers, level ignore, const std::string &amp;logger_name)" -->
+<a class="anchor" id="a3cadf9937463b65343f29459a59bf564"></a><!-- doxytag: member="al::logger::logger" ref="a3cadf9937463b65343f29459a59bf564" args="(const std::list&lt; std::shared_ptr&lt; handler &gt;&gt; &amp;handlers, level ignore, const std::string &amp;logger_name, bool t)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classal_1_1logger.html#a1b4657f03e90502d6cc655051d968a64">al::logger::logger</a> </td>
+          <td class="memname"><a class="el" href="classal_1_1logger.html#a3cadf9937463b65343f29459a59bf564">al::logger::logger</a> </td>
           <td>(</td>
           <td class="paramtype">const std::list&lt; std::shared_ptr&lt; <a class="el" href="classal_1_1handler.html">handler</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>handlers</em>, </td>
@@ -145,7 +150,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>logger_name</em>&#160;</td>
+          <td class="paramname"><em>logger_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -161,6 +172,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">handlers</td><td>The list of handlers to be attached to this logger. </td></tr>
     <tr><td class="paramname">ignore</td><td>The ignore level for the logger. </td></tr>
     <tr><td class="paramname">logger_name</td><td>The name that will appear in logs to identify this class. </td></tr>
+    <tr><td class="paramname">t</td><td>Determines whether the logger is timestamped. </td></tr>
   </table>
   </dd>
 </dl>
@@ -187,7 +199,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -205,7 +217,7 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">level&#160;</td>
           <td class="paramname"><em>l</em></td><td>)</td>
-          <td></td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -223,7 +235,7 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>input</em></td><td>)</td>
-          <td></td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -241,7 +253,7 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classal_1_1end.html">end</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -273,7 +285,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 11 2012 00:17:01 for Al by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 12 2012 18:40:49 for Al by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

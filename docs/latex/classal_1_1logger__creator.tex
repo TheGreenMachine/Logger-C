@@ -1,5 +1,5 @@
-\hypertarget{classal_1_1logger__creator}{\section{al\-:\-:logger\-\_\-creator \-Class \-Reference}
-\label{classal_1_1logger__creator}\index{al\-::logger\-\_\-creator@{al\-::logger\-\_\-creator}}
+\hypertarget{classal_1_1logger__creator}{\section{al\-:\-:logger\-\_\-creator$<$ \-T $>$ \-Class \-Template \-Reference}
+\label{classal_1_1logger__creator}\index{al\-::logger\-\_\-creator$<$ T $>$@{al\-::logger\-\_\-creator$<$ T $>$}}
 }
 
 
@@ -13,49 +13,58 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classal_1_1logger__creator_aa09b2da8d857d2dd0757090a6e94b27e}{logger\-\_\-creator} ()
+\hyperlink{classal_1_1logger__creator_a35e1652aaa0a7f2c9efd3a8b9b49031a}{logger\-\_\-creator} ()
 \item 
-\hyperlink{classal_1_1logger__creator}{logger\-\_\-creator} \& \hyperlink{classal_1_1logger__creator_a4d321e8c955dcef2f66c349146011af9}{add\-\_\-handler} (const std\-::shared\-\_\-ptr$<$ \hyperlink{classal_1_1handler}{handler} $>$ \&new\-\_\-handler)
+\hyperlink{classal_1_1logger__creator}{logger\-\_\-creator} \& \hyperlink{classal_1_1logger__creator_a4a9a6b5cdad5b1b1dd7834e44190277c}{add\-\_\-handler} (const std\-::shared\-\_\-ptr$<$ \hyperlink{classal_1_1handler}{handler} $>$ \&new\-\_\-handler)
 \item 
-\hyperlink{classal_1_1logger__creator}{logger\-\_\-creator} \& \hyperlink{classal_1_1logger__creator_a59bb08d9ed8c2ffd5c33f40782d8465e}{set\-\_\-ignore} (const level \&l)
+\hyperlink{classal_1_1logger__creator}{logger\-\_\-creator} \& \hyperlink{classal_1_1logger__creator_a46ca3d1c26b3f4e1f0bc04995950def3}{add\-\_\-handler} (\hyperlink{classal_1_1handler}{handler} $\ast$new\-\_\-handler)
 \item 
-\hyperlink{classal_1_1logger}{logger} \hyperlink{classal_1_1logger__creator_a0053f184b8c9b376d704201f7e3bb247}{spawn} (const std\-::string \&name)
+\hyperlink{classal_1_1logger__creator}{logger\-\_\-creator} \& \hyperlink{classal_1_1logger__creator_aa98cc9aef7d054d2ac0feb5e7f176dff}{timestamped} (bool t)
+\item 
+\hyperlink{classal_1_1logger__creator}{logger\-\_\-creator} \& \hyperlink{classal_1_1logger__creator_ab0d683f294d10a8326b79f411616a530}{set\-\_\-ignore} (const level \&l)
+\item 
+\-T \hyperlink{classal_1_1logger__creator_afb665d5356529217ea15810d889a85c1}{spawn} (const std\-::string \&name)
 \end{DoxyCompactItemize}
 \subsection*{\-Protected \-Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classal_1_1logger__creator_a323fe35f3321938c644f5fa67f658d89}{std\-::list$<$ std\-::shared\-\_\-ptr\*
-$<$ \hyperlink{classal_1_1handler}{handler} $>$ $>$ {\bfseries handler\-\_\-list}}\label{classal_1_1logger__creator_a323fe35f3321938c644f5fa67f658d89}
+\hypertarget{classal_1_1logger__creator_a61e453d79d94afdf319eb5eec2990377}{std\-::list$<$ std\-::shared\-\_\-ptr\*
+$<$ \hyperlink{classal_1_1handler}{handler} $>$ $>$ {\bfseries handler\-\_\-list}}\label{classal_1_1logger__creator_a61e453d79d94afdf319eb5eec2990377}
 
 \item 
-\hypertarget{classal_1_1logger__creator_ad0994503771844b237fd9593ed964dc3}{level {\bfseries ignore\-\_\-level}}\label{classal_1_1logger__creator_ad0994503771844b237fd9593ed964dc3}
+\hypertarget{classal_1_1logger__creator_a22b6c0aac729f73bcfea6e3cf847860e}{level {\bfseries ignore\-\_\-level}}\label{classal_1_1logger__creator_a22b6c0aac729f73bcfea6e3cf847860e}
+
+\item 
+\hypertarget{classal_1_1logger__creator_a3bcc25ff69274572ce554a6995d1a634}{bool {\bfseries is\-\_\-timestamped}}\label{classal_1_1logger__creator_a3bcc25ff69274572ce554a6995d1a634}
 
 \end{DoxyCompactItemize}
 
 
 \subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename T$>$class al\-::logger\-\_\-creator$<$ T $>$}
+
 \-This class should be used to specify the settings of a logger or loggers and then to generate them. 
 
 \hyperlink{classal_1_1logger__creator}{logger\-\_\-creator} 
 
 \subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classal_1_1logger__creator_aa09b2da8d857d2dd0757090a6e94b27e}{\index{al\-::logger\-\_\-creator@{al\-::logger\-\_\-creator}!logger\-\_\-creator@{logger\-\_\-creator}}
+\hypertarget{classal_1_1logger__creator_a35e1652aaa0a7f2c9efd3a8b9b49031a}{\index{al\-::logger\-\_\-creator@{al\-::logger\-\_\-creator}!logger\-\_\-creator@{logger\-\_\-creator}}
 \index{logger\-\_\-creator@{logger\-\_\-creator}!al::logger_creator@{al\-::logger\-\_\-creator}}
-\subsubsection[{logger\-\_\-creator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf al\-::logger\-\_\-creator\-::logger\-\_\-creator} (
+\subsubsection[{logger\-\_\-creator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf al\-::logger\-\_\-creator}$<$ \-T $>$\-::{\bf logger\-\_\-creator} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classal_1_1logger__creator_aa09b2da8d857d2dd0757090a6e94b27e}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classal_1_1logger__creator_a35e1652aaa0a7f2c9efd3a8b9b49031a}
 creates a default logger, the initial ignore level is none 
 
 \subsection{\-Member \-Function \-Documentation}
-\hypertarget{classal_1_1logger__creator_a4d321e8c955dcef2f66c349146011af9}{\index{al\-::logger\-\_\-creator@{al\-::logger\-\_\-creator}!add\-\_\-handler@{add\-\_\-handler}}
+\hypertarget{classal_1_1logger__creator_a4a9a6b5cdad5b1b1dd7834e44190277c}{\index{al\-::logger\-\_\-creator@{al\-::logger\-\_\-creator}!add\-\_\-handler@{add\-\_\-handler}}
 \index{add\-\_\-handler@{add\-\_\-handler}!al::logger_creator@{al\-::logger\-\_\-creator}}
-\subsubsection[{add\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger\-\_\-creator}\& {\bf al\-::logger\-\_\-creator\-::add\-\_\-handler} (
+\subsubsection[{add\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf logger\-\_\-creator}\& {\bf al\-::logger\-\_\-creator}$<$ \-T $>$\-::{\bf add\-\_\-handler} (
 \begin{DoxyParamCaption}
 \item[{const std\-::shared\-\_\-ptr$<$ {\bf handler} $>$ \&}]{new\-\_\-handler}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classal_1_1logger__creator_a4d321e8c955dcef2f66c349146011af9}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classal_1_1logger__creator_a4a9a6b5cdad5b1b1dd7834e44190277c}
 \-This adds a new handler to the list of handlers. \-This will \-N\-O\-T affect previously generated loggers, but will affect any loggers generated after this call.
 
 
@@ -63,13 +72,27 @@ creates a default logger, the initial ignore level is none
 {\em new\-\_\-handler} & \-The handler that will be added. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classal_1_1logger__creator_a59bb08d9ed8c2ffd5c33f40782d8465e}{\index{al\-::logger\-\_\-creator@{al\-::logger\-\_\-creator}!set\-\_\-ignore@{set\-\_\-ignore}}
+\hypertarget{classal_1_1logger__creator_a46ca3d1c26b3f4e1f0bc04995950def3}{\index{al\-::logger\-\_\-creator@{al\-::logger\-\_\-creator}!add\-\_\-handler@{add\-\_\-handler}}
+\index{add\-\_\-handler@{add\-\_\-handler}!al::logger_creator@{al\-::logger\-\_\-creator}}
+\subsubsection[{add\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf logger\-\_\-creator}\& {\bf al\-::logger\-\_\-creator}$<$ \-T $>$\-::{\bf add\-\_\-handler} (
+\begin{DoxyParamCaption}
+\item[{{\bf handler} $\ast$}]{new\-\_\-handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classal_1_1logger__creator_a46ca3d1c26b3f4e1f0bc04995950def3}
+\-This adds a new handler to the list of handlers. \-This will \-N\-O\-T affect previously generated loggers, but will affect any loggers generated after this call.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em new\-\_\-handler} & \-The handler that will be added. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classal_1_1logger__creator_ab0d683f294d10a8326b79f411616a530}{\index{al\-::logger\-\_\-creator@{al\-::logger\-\_\-creator}!set\-\_\-ignore@{set\-\_\-ignore}}
 \index{set\-\_\-ignore@{set\-\_\-ignore}!al::logger_creator@{al\-::logger\-\_\-creator}}
-\subsubsection[{set\-\_\-ignore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger\-\_\-creator}\& {\bf al\-::logger\-\_\-creator\-::set\-\_\-ignore} (
+\subsubsection[{set\-\_\-ignore}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf logger\-\_\-creator}\& {\bf al\-::logger\-\_\-creator}$<$ \-T $>$\-::{\bf set\-\_\-ignore} (
 \begin{DoxyParamCaption}
 \item[{const level \&}]{l}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classal_1_1logger__creator_a59bb08d9ed8c2ffd5c33f40782d8465e}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classal_1_1logger__creator_ab0d683f294d10a8326b79f411616a530}
 \-This sets the ignore level on any loggers generated after this call. \-It will \-N\-O\-T affect any previously created loggers.
 
 
@@ -77,14 +100,28 @@ creates a default logger, the initial ignore level is none
 {\em l} & \-The level that will be the new ignore level. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classal_1_1logger__creator_a0053f184b8c9b376d704201f7e3bb247}{\index{al\-::logger\-\_\-creator@{al\-::logger\-\_\-creator}!spawn@{spawn}}
+\hypertarget{classal_1_1logger__creator_afb665d5356529217ea15810d889a85c1}{\index{al\-::logger\-\_\-creator@{al\-::logger\-\_\-creator}!spawn@{spawn}}
 \index{spawn@{spawn}!al::logger_creator@{al\-::logger\-\_\-creator}}
-\subsubsection[{spawn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} {\bf al\-::logger\-\_\-creator\-::spawn} (
+\subsubsection[{spawn}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ \-T {\bf al\-::logger\-\_\-creator}$<$ \-T $>$\-::{\bf spawn} (
 \begin{DoxyParamCaption}
 \item[{const std\-::string \&}]{name}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classal_1_1logger__creator_a0053f184b8c9b376d704201f7e3bb247}
-\-Generates a new logger with the current list of handlers, the current ignore level and the suppplied name 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classal_1_1logger__creator_afb665d5356529217ea15810d889a85c1}
+\-Generates a new logger with the current list of handlers, the current ignore level and the suppplied name \hypertarget{classal_1_1logger__creator_aa98cc9aef7d054d2ac0feb5e7f176dff}{\index{al\-::logger\-\_\-creator@{al\-::logger\-\_\-creator}!timestamped@{timestamped}}
+\index{timestamped@{timestamped}!al::logger_creator@{al\-::logger\-\_\-creator}}
+\subsubsection[{timestamped}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf logger\-\_\-creator}\& {\bf al\-::logger\-\_\-creator}$<$ \-T $>$\-::{\bf timestamped} (
+\begin{DoxyParamCaption}
+\item[{bool}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classal_1_1logger__creator_aa98cc9aef7d054d2ac0feb5e7f176dff}
+\-Decides whether log entries should have a time stamp on any loggers generated after this call. \-It will \-N\-O\-T affect any previously created loggers.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em t} & true if there should be a timestamp \\
+\hline
+\end{DoxyParams}
+
 
 \-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 

@@ -26,6 +26,12 @@ struct {\bfseries log\-\_\-entry}
 \item 
 \hyperlink{classal_1_1memory__handler_a74331eb896c73e46e9d8da1ab8443b32}{memory\-\_\-handler} (size\-\_\-t bsize, std\-::shared\-\_\-ptr$<$ \hyperlink{classal_1_1handler}{handler} $>$ exit)
 \item 
+\hyperlink{classal_1_1memory__handler_a9fb2ab334acd0702992e2457c4098b77}{memory\-\_\-handler} (size\-\_\-t bsize, \hyperlink{classal_1_1handler}{handler} $\ast$exit)
+\item 
+void \hyperlink{classal_1_1memory__handler_a6e8ccdb9752f787cedd61576c8758298}{handle} (const std\-::string \&)
+\item 
+void \hyperlink{classal_1_1memory__handler_a5d2bda991fb466cf804fbd0646f21eea}{handle} (level, const std\-::string \&, const std\-::string \&, const std\-::string \&)
+\item 
 void \hyperlink{classal_1_1memory__handler_ac7d78c5cee952f2934b12e26f4f271eb}{handle} (level, const std\-::string \&, const std\-::string \&)
 \item 
 \hyperlink{classal_1_1memory__handler_a09887d99cbdaea2db862a92b9d1edd7c}{$\sim$memory\-\_\-handler} ()
@@ -53,6 +59,21 @@ void \hyperlink{classal_1_1memory__handler_ac7d78c5cee952f2934b12e26f4f271eb}{ha
 {\em exit} & \-The handler which should be invoked on this objects destruction. \\
 \hline
 \end{DoxyParams}
+\hypertarget{classal_1_1memory__handler_a9fb2ab334acd0702992e2457c4098b77}{\index{al\-::memory\-\_\-handler@{al\-::memory\-\_\-handler}!memory\-\_\-handler@{memory\-\_\-handler}}
+\index{memory\-\_\-handler@{memory\-\_\-handler}!al::memory_handler@{al\-::memory\-\_\-handler}}
+\subsubsection[{memory\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memory\-\_\-handler\-::memory\-\_\-handler} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{bsize, }
+\item[{{\bf handler} $\ast$}]{exit}
+\end{DoxyParamCaption}
+)}}\label{classal_1_1memory__handler_a9fb2ab334acd0702992e2457c4098b77}
+
+\begin{DoxyParams}{\-Parameters}
+{\em bsize} & \-The maximum number of entries to store in memory. \\
+\hline
+{\em exit} & \-The handler which should be invoked on this objects destruction. \\
+\hline
+\end{DoxyParams}
 \hypertarget{classal_1_1memory__handler_a09887d99cbdaea2db862a92b9d1edd7c}{\index{al\-::memory\-\_\-handler@{al\-::memory\-\_\-handler}!$\sim$memory\-\_\-handler@{$\sim$memory\-\_\-handler}}
 \index{$\sim$memory\-\_\-handler@{$\sim$memory\-\_\-handler}!al::memory_handler@{al\-::memory\-\_\-handler}}
 \subsubsection[{$\sim$memory\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memory\-\_\-handler\-::$\sim$memory\-\_\-handler} (
@@ -65,6 +86,31 @@ void \hyperlink{classal_1_1memory__handler_ac7d78c5cee952f2934b12e26f4f271eb}{ha
 \-If an exception is thrown, it is caught silently and the destructor returns. 
 
 \subsection{\-Member \-Function \-Documentation}
+\hypertarget{classal_1_1memory__handler_a6e8ccdb9752f787cedd61576c8758298}{\index{al\-::memory\-\_\-handler@{al\-::memory\-\_\-handler}!handle@{handle}}
+\index{handle@{handle}!al::memory_handler@{al\-::memory\-\_\-handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf memory\-\_\-handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classal_1_1memory__handler_a6e8ccdb9752f787cedd61576c8758298}
+\-Stores the entry in memory (currently a std\-::deque). \-If the number of entries exceeds the expected maximum amount, the oldest is deleted. 
+
+\-Implements \hyperlink{classal_1_1handler_af041d0c1de7e49607e27572f73413e82}{al\-::handler}.
+
+\hypertarget{classal_1_1memory__handler_a5d2bda991fb466cf804fbd0646f21eea}{\index{al\-::memory\-\_\-handler@{al\-::memory\-\_\-handler}!handle@{handle}}
+\index{handle@{handle}!al::memory_handler@{al\-::memory\-\_\-handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf memory\-\_\-handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{level}]{l, }
+\item[{const std\-::string \&}]{time, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classal_1_1memory__handler_a5d2bda991fb466cf804fbd0646f21eea}
+\-Stores the entry in memory (currently a std\-::deque). \-If the number of entries exceeds the expected maximum amount, the oldest is deleted. 
+
+\-Implements \hyperlink{classal_1_1handler_a11ebca923dc7a3f8ffa3f802c5598cb0}{al\-::handler}.
+
 \hypertarget{classal_1_1memory__handler_ac7d78c5cee952f2934b12e26f4f271eb}{\index{al\-::memory\-\_\-handler@{al\-::memory\-\_\-handler}!handle@{handle}}
 \index{handle@{handle}!al::memory_handler@{al\-::memory\-\_\-handler}}
 \subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf memory\-\_\-handler\-::handle} (

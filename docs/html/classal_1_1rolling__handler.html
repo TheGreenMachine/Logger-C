@@ -125,6 +125,8 @@ Inheritance diagram for al::rolling_handler:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1rolling__handler.html#a3794e5b1bca80be34af48a037c6ecf20">rolling_handler</a> (const std::string &amp;name, size_t max_e, size_t max_f)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1rolling__handler.html#a70bcaa16809070c914baa628a51650fb">handle</a> (const std::string &amp;message)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1rolling__handler.html#a7be82c1cfe439d591d50dc83eeea35c8">handle</a> (level l, const std::string &amp;timestamp, const std::string &amp;name, const std::string &amp;message)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1rolling__handler.html#aaaeaff11945ff3c2a313f465724ad8a7">handle</a> (level l, const std::string &amp;name, const std::string &amp;message)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -173,12 +175,89 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a70bcaa16809070c914baa628a51650fb"></a><!-- doxytag: member="al::rolling_handler::handle" ref="a70bcaa16809070c914baa628a51650fb" args="(const std::string &amp;message)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classal_1_1rolling__handler.html#a70bcaa16809070c914baa628a51650fb">al::rolling_handler::handle</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Writes the appropriate information in csv form using a rotator. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The raw message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classal_1_1handler.html#af041d0c1de7e49607e27572f73413e82">al::handler</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7be82c1cfe439d591d50dc83eeea35c8"></a><!-- doxytag: member="al::rolling_handler::handle" ref="a7be82c1cfe439d591d50dc83eeea35c8" args="(level l, const std::string &amp;timestamp, const std::string &amp;name, const std::string &amp;message)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classal_1_1rolling__handler.html#a70bcaa16809070c914baa628a51650fb">al::rolling_handler::handle</a> </td>
+          <td>(</td>
+          <td class="paramtype">level&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>timestamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Writes the appropriate information in csv form using a rotator. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The level of the entry. </td></tr>
+    <tr><td class="paramname">timestamp</td><td>The timestamp of the entry </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the logger which created it. </td></tr>
+    <tr><td class="paramname">message</td><td>The actual message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classal_1_1handler.html#a11ebca923dc7a3f8ffa3f802c5598cb0">al::handler</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aaaeaff11945ff3c2a313f465724ad8a7"></a><!-- doxytag: member="al::rolling_handler::handle" ref="aaaeaff11945ff3c2a313f465724ad8a7" args="(level l, const std::string &amp;name, const std::string &amp;message)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classal_1_1rolling__handler.html#aaaeaff11945ff3c2a313f465724ad8a7">al::rolling_handler::handle</a> </td>
+          <td class="memname">void <a class="el" href="classal_1_1rolling__handler.html#a70bcaa16809070c914baa628a51650fb">al::rolling_handler::handle</a> </td>
           <td>(</td>
           <td class="paramtype">level&#160;</td>
           <td class="paramname"><em>l</em>, </td>
@@ -238,7 +317,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 11 2012 00:17:01 for Al by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 12 2012 18:40:49 for Al by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

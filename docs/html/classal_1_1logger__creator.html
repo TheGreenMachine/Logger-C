@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Al: al::logger_creator Class Reference</title>
+<title>Al: al::logger_creator&lt; T &gt; Class Template Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
-<div class="title">al::logger_creator Class Reference</div>  </div>
+<div class="title">al::logger_creator&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="al::logger_creator" -->
@@ -116,28 +116,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger__creator.html#aa09b2da8d857d2dd0757090a6e94b27e">logger_creator</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classal_1_1logger__creator.html">logger_creator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger__creator.html#a4d321e8c955dcef2f66c349146011af9">add_handler</a> (const std::shared_ptr&lt; <a class="el" href="classal_1_1handler.html">handler</a> &gt; &amp;new_handler)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classal_1_1logger__creator.html">logger_creator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger__creator.html#a59bb08d9ed8c2ffd5c33f40782d8465e">set_ignore</a> (const level &amp;l)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classal_1_1logger.html">logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger__creator.html#a0053f184b8c9b376d704201f7e3bb247">spawn</a> (const std::string &amp;name)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger__creator.html#a35e1652aaa0a7f2c9efd3a8b9b49031a">logger_creator</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classal_1_1logger__creator.html">logger_creator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger__creator.html#a4a9a6b5cdad5b1b1dd7834e44190277c">add_handler</a> (const std::shared_ptr&lt; <a class="el" href="classal_1_1handler.html">handler</a> &gt; &amp;new_handler)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classal_1_1logger__creator.html">logger_creator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger__creator.html#a46ca3d1c26b3f4e1f0bc04995950def3">add_handler</a> (<a class="el" href="classal_1_1handler.html">handler</a> *new_handler)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classal_1_1logger__creator.html">logger_creator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger__creator.html#aa98cc9aef7d054d2ac0feb5e7f176dff">timestamped</a> (bool t)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classal_1_1logger__creator.html">logger_creator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger__creator.html#ab0d683f294d10a8326b79f411616a530">set_ignore</a> (const level &amp;l)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1logger__creator.html#afb665d5356529217ea15810d889a85c1">spawn</a> (const std::string &amp;name)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a323fe35f3321938c644f5fa67f658d89"></a><!-- doxytag: member="al::logger_creator::handler_list" ref="a323fe35f3321938c644f5fa67f658d89" args="" -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61e453d79d94afdf319eb5eec2990377"></a><!-- doxytag: member="al::logger_creator::handler_list" ref="a61e453d79d94afdf319eb5eec2990377" args="" -->
 std::list&lt; std::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classal_1_1handler.html">handler</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>handler_list</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0994503771844b237fd9593ed964dc3"></a><!-- doxytag: member="al::logger_creator::ignore_level" ref="ad0994503771844b237fd9593ed964dc3" args="" -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22b6c0aac729f73bcfea6e3cf847860e"></a><!-- doxytag: member="al::logger_creator::ignore_level" ref="a22b6c0aac729f73bcfea6e3cf847860e" args="" -->
 level&#160;</td><td class="memItemRight" valign="bottom"><b>ignore_level</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bcc25ff69274572ce554a6995d1a634"></a><!-- doxytag: member="al::logger_creator::is_timestamped" ref="a3bcc25ff69274572ce554a6995d1a634" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_timestamped</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>This class should be used to specify the settings of a logger or loggers and then to generate them. </p>
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+class al::logger_creator&lt; T &gt;</h3>
+
+<p>This class should be used to specify the settings of a logger or loggers and then to generate them. </p>
 <p><a class="el" href="classal_1_1logger__creator.html" title="This class should be used to specify the settings of a logger or loggers and then to generate them...">logger_creator</a> </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa09b2da8d857d2dd0757090a6e94b27e"></a><!-- doxytag: member="al::logger_creator::logger_creator" ref="aa09b2da8d857d2dd0757090a6e94b27e" args="()" -->
+<a class="anchor" id="a35e1652aaa0a7f2c9efd3a8b9b49031a"></a><!-- doxytag: member="al::logger_creator::logger_creator" ref="a35e1652aaa0a7f2c9efd3a8b9b49031a" args="()" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classal_1_1logger__creator.html#aa09b2da8d857d2dd0757090a6e94b27e">al::logger_creator::logger_creator</a> </td>
+          <td class="memname"><a class="el" href="classal_1_1logger__creator.html">al::logger_creator</a>&lt; T &gt;::<a class="el" href="classal_1_1logger__creator.html">logger_creator</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [inline]</code></td>
@@ -150,12 +159,14 @@ level&#160;</td><td class="memItemRight" valign="bottom"><b>ignore_level</b></td
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a4d321e8c955dcef2f66c349146011af9"></a><!-- doxytag: member="al::logger_creator::add_handler" ref="a4d321e8c955dcef2f66c349146011af9" args="(const std::shared_ptr&lt; handler &gt; &amp;new_handler)" -->
+<a class="anchor" id="a4a9a6b5cdad5b1b1dd7834e44190277c"></a><!-- doxytag: member="al::logger_creator::add_handler" ref="a4a9a6b5cdad5b1b1dd7834e44190277c" args="(const std::shared_ptr&lt; handler &gt; &amp;new_handler)" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classal_1_1logger__creator.html">logger_creator</a>&amp; <a class="el" href="classal_1_1logger__creator.html#a4d321e8c955dcef2f66c349146011af9">al::logger_creator::add_handler</a> </td>
+          <td class="memname"><a class="el" href="classal_1_1logger__creator.html">logger_creator</a>&amp; <a class="el" href="classal_1_1logger__creator.html">al::logger_creator</a>&lt; T &gt;::<a class="el" href="classal_1_1logger__creator.html#a4a9a6b5cdad5b1b1dd7834e44190277c">add_handler</a> </td>
           <td>(</td>
           <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classal_1_1handler.html">handler</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>new_handler</em></td><td>)</td>
@@ -174,12 +185,40 @@ level&#160;</td><td class="memItemRight" valign="bottom"><b>ignore_level</b></td
 
 </div>
 </div>
-<a class="anchor" id="a59bb08d9ed8c2ffd5c33f40782d8465e"></a><!-- doxytag: member="al::logger_creator::set_ignore" ref="a59bb08d9ed8c2ffd5c33f40782d8465e" args="(const level &amp;l)" -->
+<a class="anchor" id="a46ca3d1c26b3f4e1f0bc04995950def3"></a><!-- doxytag: member="al::logger_creator::add_handler" ref="a46ca3d1c26b3f4e1f0bc04995950def3" args="(handler *new_handler)" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classal_1_1logger__creator.html">logger_creator</a>&amp; <a class="el" href="classal_1_1logger__creator.html#a59bb08d9ed8c2ffd5c33f40782d8465e">al::logger_creator::set_ignore</a> </td>
+          <td class="memname"><a class="el" href="classal_1_1logger__creator.html">logger_creator</a>&amp; <a class="el" href="classal_1_1logger__creator.html">al::logger_creator</a>&lt; T &gt;::<a class="el" href="classal_1_1logger__creator.html#a4a9a6b5cdad5b1b1dd7834e44190277c">add_handler</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classal_1_1handler.html">handler</a> *&#160;</td>
+          <td class="paramname"><em>new_handler</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>This adds a new handler to the list of handlers. This will NOT affect previously generated loggers, but will affect any loggers generated after this call.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_handler</td><td>The handler that will be added. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab0d683f294d10a8326b79f411616a530"></a><!-- doxytag: member="al::logger_creator::set_ignore" ref="ab0d683f294d10a8326b79f411616a530" args="(const level &amp;l)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classal_1_1logger__creator.html">logger_creator</a>&amp; <a class="el" href="classal_1_1logger__creator.html">al::logger_creator</a>&lt; T &gt;::<a class="el" href="classal_1_1logger__creator.html#ab0d683f294d10a8326b79f411616a530">set_ignore</a> </td>
           <td>(</td>
           <td class="paramtype">const level &amp;&#160;</td>
           <td class="paramname"><em>l</em></td><td>)</td>
@@ -198,12 +237,14 @@ level&#160;</td><td class="memItemRight" valign="bottom"><b>ignore_level</b></td
 
 </div>
 </div>
-<a class="anchor" id="a0053f184b8c9b376d704201f7e3bb247"></a><!-- doxytag: member="al::logger_creator::spawn" ref="a0053f184b8c9b376d704201f7e3bb247" args="(const std::string &amp;name)" -->
+<a class="anchor" id="afb665d5356529217ea15810d889a85c1"></a><!-- doxytag: member="al::logger_creator::spawn" ref="afb665d5356529217ea15810d889a85c1" args="(const std::string &amp;name)" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classal_1_1logger.html">logger</a> <a class="el" href="classal_1_1logger__creator.html#a0053f184b8c9b376d704201f7e3bb247">al::logger_creator::spawn</a> </td>
+          <td class="memname">T <a class="el" href="classal_1_1logger__creator.html">al::logger_creator</a>&lt; T &gt;::<a class="el" href="classal_1_1logger__creator.html#afb665d5356529217ea15810d889a85c1">spawn</a> </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -213,6 +254,32 @@ level&#160;</td><td class="memItemRight" valign="bottom"><b>ignore_level</b></td
 </div>
 <div class="memdoc">
 <p>Generates a new logger with the current list of handlers, the current ignore level and the suppplied name </p>
+
+</div>
+</div>
+<a class="anchor" id="aa98cc9aef7d054d2ac0feb5e7f176dff"></a><!-- doxytag: member="al::logger_creator::timestamped" ref="aa98cc9aef7d054d2ac0feb5e7f176dff" args="(bool t)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classal_1_1logger__creator.html">logger_creator</a>&amp; <a class="el" href="classal_1_1logger__creator.html">al::logger_creator</a>&lt; T &gt;::<a class="el" href="classal_1_1logger__creator.html#aa98cc9aef7d054d2ac0feb5e7f176dff">timestamped</a> </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Decides whether log entries should have a time stamp on any loggers generated after this call. It will NOT affect any previously created loggers.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>true if there should be a timestamp </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -237,7 +304,7 @@ level&#160;</td><td class="memItemRight" valign="bottom"><b>ignore_level</b></td
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 11 2012 00:17:01 for Al by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 12 2012 18:40:49 for Al by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

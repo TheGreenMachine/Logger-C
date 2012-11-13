@@ -13,19 +13,22 @@
 \-Inheritance diagram for al\-:\-:handler\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classal_1_1handler}
+\includegraphics[height=1.723077cm]{classal_1_1handler}
 \end{center}
 \end{figure}
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \hyperlink{classal_1_1handler_a29a3fb2757d02ed144cb71166aad1dfe}{handle} (level l, const std\-::string \&name, const std\-::string \&message)=0
+\item 
+virtual void \hyperlink{classal_1_1handler_a11ebca923dc7a3f8ffa3f802c5598cb0}{handle} (level l, const std\-::string \&name, const std\-::string \&timestamp, const std\-::string \&message)=0
+\item 
+virtual void \hyperlink{classal_1_1handler_af041d0c1de7e49607e27572f73413e82}{handle} (const std\-::string \&message)=0
 \end{DoxyCompactItemize}
 \subsection*{\-Protected \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classal_1_1handler_a46745146bc6348c43f6fd469df59ef2a}{virtual std\-::string {\bfseries to\-\_\-string} (level l)}\label{classal_1_1handler_a46745146bc6348c43f6fd469df59ef2a}
-
+virtual std\-::string \hyperlink{classal_1_1handler_a46745146bc6348c43f6fd469df59ef2a}{to\-\_\-string} (level l)
 \end{DoxyCompactItemize}
 
 
@@ -55,9 +58,57 @@ handler
 \end{DoxyParams}
 
 
-\-Implemented in \hyperlink{classal_1_1rolling__handler_aaaeaff11945ff3c2a313f465724ad8a7}{al\-::rolling\-\_\-handler}, \hyperlink{classal_1_1memory__handler_ac7d78c5cee952f2934b12e26f4f271eb}{al\-::memory\-\_\-handler}, and \hyperlink{classal_1_1file__handler_a5de57304a22107e403c1ac917001da38}{al\-::file\-\_\-handler}.
+\-Implemented in \hyperlink{classal_1_1rolling__handler_aaaeaff11945ff3c2a313f465724ad8a7}{al\-::rolling\-\_\-handler}, \hyperlink{classal_1_1memory__handler_ac7d78c5cee952f2934b12e26f4f271eb}{al\-::memory\-\_\-handler}, \hyperlink{classal_1_1file__handler_a5de57304a22107e403c1ac917001da38}{al\-::file\-\_\-handler}, \hyperlink{classal_1_1cerr__handler_aec62acaf51e9a5046ef300fe6787d1aa}{al\-::cerr\-\_\-handler}, and \hyperlink{classal_1_1cerr__handler_aec62acaf51e9a5046ef300fe6787d1aa}{al\-::cerr\-\_\-handler}.
+
+\hypertarget{classal_1_1handler_a11ebca923dc7a3f8ffa3f802c5598cb0}{\index{al\-::handler@{al\-::handler}!handle@{handle}}
+\index{handle@{handle}!al::handler@{al\-::handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf al\-::handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{level}]{l, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{timestamp, }
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{classal_1_1handler_a11ebca923dc7a3f8ffa3f802c5598cb0}
+\-This is the method called to handle a log entry. \-It handles timestamps. 
+\begin{DoxyParams}{\-Parameters}
+{\em l} & \-The level of the entry. \\
+\hline
+{\em name} & \-The name of the logger that generated it. \\
+\hline
+{\em timestamp} & \-The time indicating when the log message was entered. \\
+\hline
+{\em message} & \-The actual text of the entry \\
+\hline
+\end{DoxyParams}
 
 
+\-Implemented in \hyperlink{classal_1_1rolling__handler_a7be82c1cfe439d591d50dc83eeea35c8}{al\-::rolling\-\_\-handler}, \hyperlink{classal_1_1memory__handler_a5d2bda991fb466cf804fbd0646f21eea}{al\-::memory\-\_\-handler}, \hyperlink{classal_1_1file__handler_a1376091820f51db3ef0423b0e39a9680}{al\-::file\-\_\-handler}, \hyperlink{classal_1_1cerr__handler_a70dcc4ff1a54a3af30a62e70eb1ec4a5}{al\-::cerr\-\_\-handler}, and \hyperlink{classal_1_1cerr__handler_a70dcc4ff1a54a3af30a62e70eb1ec4a5}{al\-::cerr\-\_\-handler}.
+
+\hypertarget{classal_1_1handler_af041d0c1de7e49607e27572f73413e82}{\index{al\-::handler@{al\-::handler}!handle@{handle}}
+\index{handle@{handle}!al::handler@{al\-::handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf al\-::handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{classal_1_1handler_af041d0c1de7e49607e27572f73413e82}
+\-This is the method called to handle a log entry. \-It is meant for people who want a custom log format. 
+\begin{DoxyParams}{\-Parameters}
+{\em message} & \-The raw text of the entry \\
+\hline
+\end{DoxyParams}
+
+
+\-Implemented in \hyperlink{classal_1_1file__handler_a1d02c57ba2bb955c4a2ecf6886b96756}{al\-::file\-\_\-handler}, \hyperlink{classal_1_1memory__handler_a6e8ccdb9752f787cedd61576c8758298}{al\-::memory\-\_\-handler}, \hyperlink{classal_1_1rolling__handler_a70bcaa16809070c914baa628a51650fb}{al\-::rolling\-\_\-handler}, \hyperlink{classal_1_1cerr__handler_adc5f179798baf0a4c6a53a539814b4db}{al\-::cerr\-\_\-handler}, and \hyperlink{classal_1_1cerr__handler_adc5f179798baf0a4c6a53a539814b4db}{al\-::cerr\-\_\-handler}.
+
+\hypertarget{classal_1_1handler_a46745146bc6348c43f6fd469df59ef2a}{\index{al\-::handler@{al\-::handler}!to\-\_\-string@{to\-\_\-string}}
+\index{to\-\_\-string@{to\-\_\-string}!al::handler@{al\-::handler}}
+\subsubsection[{to\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string {\bf al\-::handler\-::to\-\_\-string} (
+\begin{DoxyParamCaption}
+\item[{level}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{classal_1_1handler_a46745146bc6348c43f6fd469df59ef2a}
+\-Potentially throws runtime\-\_\-error if an unrecognized option is passed. \-Should be impossible 
 
 \-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 

@@ -129,6 +129,9 @@ Classes</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1memory__handler.html#a74331eb896c73e46e9d8da1ab8443b32">memory_handler</a> (size_t bsize, std::shared_ptr&lt; <a class="el" href="classal_1_1handler.html">handler</a> &gt; exit)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1memory__handler.html#a9fb2ab334acd0702992e2457c4098b77">memory_handler</a> (size_t bsize, <a class="el" href="classal_1_1handler.html">handler</a> *exit)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1memory__handler.html#a6e8ccdb9752f787cedd61576c8758298">handle</a> (const std::string &amp;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1memory__handler.html#a5d2bda991fb466cf804fbd0646f21eea">handle</a> (level, const std::string &amp;, const std::string &amp;, const std::string &amp;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1memory__handler.html#ac7d78c5cee952f2934b12e26f4f271eb">handle</a> (level, const std::string &amp;, const std::string &amp;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1memory__handler.html#a09887d99cbdaea2db862a92b9d1edd7c">~memory_handler</a> ()</td></tr>
 </table>
@@ -170,6 +173,40 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9fb2ab334acd0702992e2457c4098b77"></a><!-- doxytag: member="al::memory_handler::memory_handler" ref="a9fb2ab334acd0702992e2457c4098b77" args="(size_t bsize, handler *exit)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classal_1_1memory__handler.html#a74331eb896c73e46e9d8da1ab8443b32">memory_handler::memory_handler</a> </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>bsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classal_1_1handler.html">handler</a> *&#160;</td>
+          <td class="paramname"><em>exit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bsize</td><td>The maximum number of entries to store in memory. </td></tr>
+    <tr><td class="paramname">exit</td><td>The handler which should be invoked on this objects destruction. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a09887d99cbdaea2db862a92b9d1edd7c"></a><!-- doxytag: member="al::memory_handler::~memory_handler" ref="a09887d99cbdaea2db862a92b9d1edd7c" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -189,12 +226,74 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a6e8ccdb9752f787cedd61576c8758298"></a><!-- doxytag: member="al::memory_handler::handle" ref="a6e8ccdb9752f787cedd61576c8758298" args="(const std::string &amp;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classal_1_1memory__handler.html#a6e8ccdb9752f787cedd61576c8758298">memory_handler::handle</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Stores the entry in memory (currently a std::deque). If the number of entries exceeds the expected maximum amount, the oldest is deleted. </p>
+
+<p>Implements <a class="el" href="classal_1_1handler.html#af041d0c1de7e49607e27572f73413e82">al::handler</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d2bda991fb466cf804fbd0646f21eea"></a><!-- doxytag: member="al::memory_handler::handle" ref="a5d2bda991fb466cf804fbd0646f21eea" args="(level, const std::string &amp;, const std::string &amp;, const std::string &amp;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classal_1_1memory__handler.html#a6e8ccdb9752f787cedd61576c8758298">memory_handler::handle</a> </td>
+          <td>(</td>
+          <td class="paramtype">level&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Stores the entry in memory (currently a std::deque). If the number of entries exceeds the expected maximum amount, the oldest is deleted. </p>
+
+<p>Implements <a class="el" href="classal_1_1handler.html#a11ebca923dc7a3f8ffa3f802c5598cb0">al::handler</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac7d78c5cee952f2934b12e26f4f271eb"></a><!-- doxytag: member="al::memory_handler::handle" ref="ac7d78c5cee952f2934b12e26f4f271eb" args="(level, const std::string &amp;, const std::string &amp;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classal_1_1memory__handler.html#ac7d78c5cee952f2934b12e26f4f271eb">memory_handler::handle</a> </td>
+          <td class="memname">void <a class="el" href="classal_1_1memory__handler.html#a6e8ccdb9752f787cedd61576c8758298">memory_handler::handle</a> </td>
           <td>(</td>
           <td class="paramtype">level&#160;</td>
           <td class="paramname"><em>l</em>, </td>
@@ -247,7 +346,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 11 2012 00:17:01 for Al by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 12 2012 18:40:49 for Al by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

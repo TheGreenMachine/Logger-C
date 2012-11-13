@@ -99,11 +99,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">al::cerr_handler Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="al::cerr_handler" --><!-- doxytag: inherits="al::handler" -->
+<!-- doxytag: class="al::cerr_handler" --><!-- doxytag: inherits="al::handler,al::handler" -->
 <p>A simple handler, it prints all log entries to cerr.  
  <a href="classal_1_1cerr__handler.html#details">More...</a></p>
 
@@ -115,15 +117,271 @@ Inheritance diagram for al::cerr_handler:</div>
   <img src="classal_1_1cerr__handler.png" usemap="#al::cerr_handler_map" alt=""/>
   <map id="al::cerr_handler_map" name="al::cerr_handler_map">
 <area href="classal_1_1handler.html" title="An abstract base class for all handler classes." alt="al::handler" shape="rect" coords="0,0,102,24"/>
+<area href="classal_1_1handler.html" title="An abstract base class for all handler classes." alt="al::handler" shape="rect" coords="112,0,214,24"/>
 </map>
  </div></div>
 
 <p><a href="classal_1_1cerr__handler-members.html">List of all members.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1cerr__handler.html#aec62acaf51e9a5046ef300fe6787d1aa">handle</a> (level l, const std::string &amp;name, const std::string &amp;message)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1cerr__handler.html#a70dcc4ff1a54a3af30a62e70eb1ec4a5">handle</a> (level l, const std::string &amp;time, const std::string &amp;name, const std::string &amp;message)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1cerr__handler.html#adc5f179798baf0a4c6a53a539814b4db">handle</a> (const std::string &amp;message)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1cerr__handler.html#aec62acaf51e9a5046ef300fe6787d1aa">handle</a> (level l, const std::string &amp;name, const std::string &amp;message)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1cerr__handler.html#a70dcc4ff1a54a3af30a62e70eb1ec4a5">handle</a> (level l, const std::string &amp;time, const std::string &amp;name, const std::string &amp;message)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classal_1_1cerr__handler.html#adc5f179798baf0a4c6a53a539814b4db">handle</a> (const std::string &amp;message)</td></tr>
+</table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A simple handler, it prints all log entries to cerr. </p>
-<p>cerr_handle The messages are of the form "(level) name : message" for easy readability. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p>A simple handler, it prints all log entries to clog.</p>
+<p>cerr_handle The messages are of the form "(level) time, name : message" for easy readability. </p>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aec62acaf51e9a5046ef300fe6787d1aa"></a><!-- doxytag: member="al::cerr_handler::handle" ref="aec62acaf51e9a5046ef300fe6787d1aa" args="(level l, const std::string &amp;name, const std::string &amp;message)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classal_1_1cerr__handler.html#aec62acaf51e9a5046ef300fe6787d1aa">al::cerr_handler::handle</a> </td>
+          <td>(</td>
+          <td class="paramtype">level&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>This is the method called to handle a log entry. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The level of the entry. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the logger that generated it. </td></tr>
+    <tr><td class="paramname">message</td><td>The actual text of the entry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classal_1_1handler.html#a29a3fb2757d02ed144cb71166aad1dfe">al::handler</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aec62acaf51e9a5046ef300fe6787d1aa"></a><!-- doxytag: member="al::cerr_handler::handle" ref="aec62acaf51e9a5046ef300fe6787d1aa" args="(level l, const std::string &amp;name, const std::string &amp;message)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classal_1_1cerr__handler.html#aec62acaf51e9a5046ef300fe6787d1aa">al::cerr_handler::handle</a> </td>
+          <td>(</td>
+          <td class="paramtype">level&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>This is the method called to handle a log entry. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The level of the entry. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the logger that generated it. </td></tr>
+    <tr><td class="paramname">message</td><td>The actual text of the entry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classal_1_1handler.html#a29a3fb2757d02ed144cb71166aad1dfe">al::handler</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a70dcc4ff1a54a3af30a62e70eb1ec4a5"></a><!-- doxytag: member="al::cerr_handler::handle" ref="a70dcc4ff1a54a3af30a62e70eb1ec4a5" args="(level l, const std::string &amp;time, const std::string &amp;name, const std::string &amp;message)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classal_1_1cerr__handler.html#aec62acaf51e9a5046ef300fe6787d1aa">al::cerr_handler::handle</a> </td>
+          <td>(</td>
+          <td class="paramtype">level&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>timestamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>This is the method called to handle a log entry. It handles timestamps. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The level of the entry. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the logger that generated it. </td></tr>
+    <tr><td class="paramname">timestamp</td><td>The time indicating when the log message was entered. </td></tr>
+    <tr><td class="paramname">message</td><td>The actual text of the entry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classal_1_1handler.html#a11ebca923dc7a3f8ffa3f802c5598cb0">al::handler</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a70dcc4ff1a54a3af30a62e70eb1ec4a5"></a><!-- doxytag: member="al::cerr_handler::handle" ref="a70dcc4ff1a54a3af30a62e70eb1ec4a5" args="(level l, const std::string &amp;time, const std::string &amp;name, const std::string &amp;message)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classal_1_1cerr__handler.html#aec62acaf51e9a5046ef300fe6787d1aa">al::cerr_handler::handle</a> </td>
+          <td>(</td>
+          <td class="paramtype">level&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>timestamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>This is the method called to handle a log entry. It handles timestamps. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The level of the entry. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the logger that generated it. </td></tr>
+    <tr><td class="paramname">timestamp</td><td>The time indicating when the log message was entered. </td></tr>
+    <tr><td class="paramname">message</td><td>The actual text of the entry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classal_1_1handler.html#a11ebca923dc7a3f8ffa3f802c5598cb0">al::handler</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc5f179798baf0a4c6a53a539814b4db"></a><!-- doxytag: member="al::cerr_handler::handle" ref="adc5f179798baf0a4c6a53a539814b4db" args="(const std::string &amp;message)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classal_1_1cerr__handler.html#aec62acaf51e9a5046ef300fe6787d1aa">al::cerr_handler::handle</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>This is the method called to handle a log entry. It is meant for people who want a custom log format. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The raw text of the entry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classal_1_1handler.html#af041d0c1de7e49607e27572f73413e82">al::handler</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc5f179798baf0a4c6a53a539814b4db"></a><!-- doxytag: member="al::cerr_handler::handle" ref="adc5f179798baf0a4c6a53a539814b4db" args="(const std::string &amp;message)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classal_1_1cerr__handler.html#aec62acaf51e9a5046ef300fe6787d1aa">al::cerr_handler::handle</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>This is the method called to handle a log entry. It is meant for people who want a custom log format. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The raw text of the entry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classal_1_1handler.html#af041d0c1de7e49607e27572f73413e82">al::handler</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/handlers/<a class="el" href="cerr__handler_8hpp_source.html">cerr_handler.hpp</a></li>
+<li>src/handlers/<a class="el" href="clog__handler_8hpp_source.html">clog_handler.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- window showing the filter options -->
@@ -143,7 +401,7 @@ Inheritance diagram for al::cerr_handler:</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 11 2012 00:17:01 for Al by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 12 2012 18:40:49 for Al by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

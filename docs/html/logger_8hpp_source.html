@@ -97,30 +97,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00019"></a>00019 
 <a name="l00024"></a><a class="code" href="classal_1_1logger.html">00024</a>   <span class="keyword">class </span><a class="code" href="classal_1_1logger.html" title="logger is a class which accepts log messages with the &lt;&lt; operator or through a member function called...">logger</a>{
 <a name="l00025"></a>00025     <span class="keyword">public</span>:
-<a name="l00034"></a><a class="code" href="classal_1_1logger.html#a1b4657f03e90502d6cc655051d968a64">00034</a>       <a class="code" href="classal_1_1logger.html#a1b4657f03e90502d6cc655051d968a64">logger</a>(<span class="keyword">const</span> std::list&lt;std::shared_ptr&lt;handler&gt;&gt;&amp; handlers, level ignore,
-<a name="l00035"></a>00035           <span class="keyword">const</span> std::string&amp; logger_name):
-<a name="l00036"></a>00036         ignore_level(ignore), handler_list(handlers), name(logger_name), current_level(level::info){}
-<a name="l00037"></a>00037 
-<a name="l00041"></a>00041       <span class="keywordtype">void</span> <a class="code" href="classal_1_1logger.html#a4b0997a0f58aa36f7bb3e18826f3bf19">log</a>(level, <span class="keyword">const</span> std::string&amp;);
-<a name="l00042"></a>00042 
-<a name="l00046"></a>00046       <a class="code" href="classal_1_1logger.html" title="logger is a class which accepts log messages with the &lt;&lt; operator or through a member function called...">logger</a>&amp; <a class="code" href="classal_1_1logger.html#aa95776ee6cf9af0a50ad12da5670f28f">operator&lt;&lt;</a>(level);
-<a name="l00047"></a>00047 
-<a name="l00051"></a>00051       <a class="code" href="classal_1_1logger.html" title="logger is a class which accepts log messages with the &lt;&lt; operator or through a member function called...">logger</a>&amp; <a class="code" href="classal_1_1logger.html#aa95776ee6cf9af0a50ad12da5670f28f">operator&lt;&lt;</a>(<span class="keyword">const</span> std::string&amp;);
-<a name="l00052"></a>00052 
-<a name="l00059"></a>00059       <a class="code" href="classal_1_1logger.html" title="logger is a class which accepts log messages with the &lt;&lt; operator or through a member function called...">logger</a>&amp; <a class="code" href="classal_1_1logger.html#aa95776ee6cf9af0a50ad12da5670f28f">operator&lt;&lt;</a>(<a class="code" href="classal_1_1end.html" title="A simple empty class that should be used to signal the end of a log entry.">end</a>);
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061       <span class="keyword">virtual</span> ~<a class="code" href="classal_1_1logger.html" title="logger is a class which accepts log messages with the &lt;&lt; operator or through a member function called...">logger</a>(){}
-<a name="l00062"></a>00062     <span class="keyword">private</span>:
-<a name="l00063"></a>00063         level ignore_level;
-<a name="l00064"></a>00064         <span class="keyword">const</span> std::list&lt;std::shared_ptr&lt;handler&gt;&gt;&amp; handler_list;
-<a name="l00065"></a>00065         <span class="keyword">const</span> std::string name;
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067         std::string message;
-<a name="l00068"></a>00068         level current_level;
-<a name="l00069"></a>00069   };
-<a name="l00070"></a>00070 }
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072 <span class="preprocessor">#endif</span>
+<a name="l00035"></a><a class="code" href="classal_1_1logger.html#a3cadf9937463b65343f29459a59bf564">00035</a>       <a class="code" href="classal_1_1logger.html#a3cadf9937463b65343f29459a59bf564">logger</a>(<span class="keyword">const</span> std::list&lt;std::shared_ptr&lt;handler&gt;&gt;&amp; handlers, level ignore,
+<a name="l00036"></a>00036           <span class="keyword">const</span> std::string&amp; logger_name, <span class="keywordtype">bool</span> t):
+<a name="l00037"></a>00037         ignore_level(ignore), handler_list(handlers), name(logger_name),
+<a name="l00038"></a>00038         is_timestamped(t), current_level(level::info){}
+<a name="l00039"></a>00039 
+<a name="l00043"></a>00043       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classal_1_1logger.html#a4b0997a0f58aa36f7bb3e18826f3bf19">log</a>(level, <span class="keyword">const</span> std::string&amp;);
+<a name="l00044"></a>00044 
+<a name="l00048"></a>00048       <span class="keyword">virtual</span> <a class="code" href="classal_1_1logger.html" title="logger is a class which accepts log messages with the &lt;&lt; operator or through a member function called...">logger</a>&amp; <a class="code" href="classal_1_1logger.html#aa95776ee6cf9af0a50ad12da5670f28f">operator&lt;&lt;</a>(level);
+<a name="l00049"></a>00049 
+<a name="l00053"></a>00053       <span class="keyword">virtual</span> <a class="code" href="classal_1_1logger.html" title="logger is a class which accepts log messages with the &lt;&lt; operator or through a member function called...">logger</a>&amp; <a class="code" href="classal_1_1logger.html#aa95776ee6cf9af0a50ad12da5670f28f">operator&lt;&lt;</a>(<span class="keyword">const</span> std::string&amp;);
+<a name="l00054"></a>00054 
+<a name="l00061"></a>00061       <span class="keyword">virtual</span> <a class="code" href="classal_1_1logger.html" title="logger is a class which accepts log messages with the &lt;&lt; operator or through a member function called...">logger</a>&amp; <a class="code" href="classal_1_1logger.html#aa95776ee6cf9af0a50ad12da5670f28f">operator&lt;&lt;</a>(<a class="code" href="classal_1_1end.html" title="A simple empty class that should be used to signal the end of a log entry.">end</a>);
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063       <span class="keyword">virtual</span> ~<a class="code" href="classal_1_1logger.html" title="logger is a class which accepts log messages with the &lt;&lt; operator or through a member function called...">logger</a>(){}
+<a name="l00064"></a>00064     <span class="keyword">protected</span>: 
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066       <span class="keyword">const</span> std::string get_timestamp();
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068     <span class="keyword">private</span>:
+<a name="l00069"></a>00069         <span class="keyword">const</span> level ignore_level;
+<a name="l00070"></a>00070         <span class="keyword">const</span> std::list&lt;std::shared_ptr&lt;handler&gt;&gt; handler_list;
+<a name="l00071"></a>00071         <span class="keyword">const</span> std::string name;
+<a name="l00072"></a>00072         <span class="keyword">const</span> <span class="keywordtype">bool</span> is_timestamped;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074         std::string message;
+<a name="l00075"></a>00075         level current_level;
+<a name="l00076"></a>00076   };
+<a name="l00077"></a>00077 }
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -139,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 11 2012 00:17:01 for Al by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 12 2012 18:40:48 for Al by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

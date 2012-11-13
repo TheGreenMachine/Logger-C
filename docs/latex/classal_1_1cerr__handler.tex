@@ -16,13 +16,160 @@
 \includegraphics[height=2.000000cm]{classal_1_1cerr__handler}
 \end{center}
 \end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classal_1_1cerr__handler_aec62acaf51e9a5046ef300fe6787d1aa}{handle} (level l, const std\-::string \&name, const std\-::string \&message)
+\item 
+void \hyperlink{classal_1_1cerr__handler_a70dcc4ff1a54a3af30a62e70eb1ec4a5}{handle} (level l, const std\-::string \&time, const std\-::string \&name, const std\-::string \&message)
+\item 
+void \hyperlink{classal_1_1cerr__handler_adc5f179798baf0a4c6a53a539814b4db}{handle} (const std\-::string \&message)
+\item 
+void \hyperlink{classal_1_1cerr__handler_aec62acaf51e9a5046ef300fe6787d1aa}{handle} (level l, const std\-::string \&name, const std\-::string \&message)
+\item 
+void \hyperlink{classal_1_1cerr__handler_a70dcc4ff1a54a3af30a62e70eb1ec4a5}{handle} (level l, const std\-::string \&time, const std\-::string \&name, const std\-::string \&message)
+\item 
+void \hyperlink{classal_1_1cerr__handler_adc5f179798baf0a4c6a53a539814b4db}{handle} (const std\-::string \&message)
+\end{DoxyCompactItemize}
 
 
 \subsection{\-Detailed \-Description}
 \-A simple handler, it prints all log entries to cerr. 
 
-cerr\-\_\-handle \-The messages are of the form \char`\"{}(level) name \-: message\char`\"{} for easy readability. 
+\-A simple handler, it prints all log entries to clog.
 
-\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+cerr\-\_\-handle \-The messages are of the form \char`\"{}(level) time, name \-: message\char`\"{} for easy readability. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classal_1_1cerr__handler_aec62acaf51e9a5046ef300fe6787d1aa}{\index{al\-::cerr\-\_\-handler@{al\-::cerr\-\_\-handler}!handle@{handle}}
+\index{handle@{handle}!al::cerr_handler@{al\-::cerr\-\_\-handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf al\-::cerr\-\_\-handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{level}]{l, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{classal_1_1cerr__handler_aec62acaf51e9a5046ef300fe6787d1aa}
+\-This is the method called to handle a log entry. 
+\begin{DoxyParams}{\-Parameters}
+{\em l} & \-The level of the entry. \\
+\hline
+{\em name} & \-The name of the logger that generated it. \\
+\hline
+{\em message} & \-The actual text of the entry \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classal_1_1handler_a29a3fb2757d02ed144cb71166aad1dfe}{al\-::handler}.
+
+\hypertarget{classal_1_1cerr__handler_aec62acaf51e9a5046ef300fe6787d1aa}{\index{al\-::cerr\-\_\-handler@{al\-::cerr\-\_\-handler}!handle@{handle}}
+\index{handle@{handle}!al::cerr_handler@{al\-::cerr\-\_\-handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf al\-::cerr\-\_\-handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{level}]{l, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{classal_1_1cerr__handler_aec62acaf51e9a5046ef300fe6787d1aa}
+\-This is the method called to handle a log entry. 
+\begin{DoxyParams}{\-Parameters}
+{\em l} & \-The level of the entry. \\
+\hline
+{\em name} & \-The name of the logger that generated it. \\
+\hline
+{\em message} & \-The actual text of the entry \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classal_1_1handler_a29a3fb2757d02ed144cb71166aad1dfe}{al\-::handler}.
+
+\hypertarget{classal_1_1cerr__handler_a70dcc4ff1a54a3af30a62e70eb1ec4a5}{\index{al\-::cerr\-\_\-handler@{al\-::cerr\-\_\-handler}!handle@{handle}}
+\index{handle@{handle}!al::cerr_handler@{al\-::cerr\-\_\-handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf al\-::cerr\-\_\-handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{level}]{l, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{timestamp, }
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{classal_1_1cerr__handler_a70dcc4ff1a54a3af30a62e70eb1ec4a5}
+\-This is the method called to handle a log entry. \-It handles timestamps. 
+\begin{DoxyParams}{\-Parameters}
+{\em l} & \-The level of the entry. \\
+\hline
+{\em name} & \-The name of the logger that generated it. \\
+\hline
+{\em timestamp} & \-The time indicating when the log message was entered. \\
+\hline
+{\em message} & \-The actual text of the entry \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classal_1_1handler_a11ebca923dc7a3f8ffa3f802c5598cb0}{al\-::handler}.
+
+\hypertarget{classal_1_1cerr__handler_a70dcc4ff1a54a3af30a62e70eb1ec4a5}{\index{al\-::cerr\-\_\-handler@{al\-::cerr\-\_\-handler}!handle@{handle}}
+\index{handle@{handle}!al::cerr_handler@{al\-::cerr\-\_\-handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf al\-::cerr\-\_\-handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{level}]{l, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{timestamp, }
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{classal_1_1cerr__handler_a70dcc4ff1a54a3af30a62e70eb1ec4a5}
+\-This is the method called to handle a log entry. \-It handles timestamps. 
+\begin{DoxyParams}{\-Parameters}
+{\em l} & \-The level of the entry. \\
+\hline
+{\em name} & \-The name of the logger that generated it. \\
+\hline
+{\em timestamp} & \-The time indicating when the log message was entered. \\
+\hline
+{\em message} & \-The actual text of the entry \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classal_1_1handler_a11ebca923dc7a3f8ffa3f802c5598cb0}{al\-::handler}.
+
+\hypertarget{classal_1_1cerr__handler_adc5f179798baf0a4c6a53a539814b4db}{\index{al\-::cerr\-\_\-handler@{al\-::cerr\-\_\-handler}!handle@{handle}}
+\index{handle@{handle}!al::cerr_handler@{al\-::cerr\-\_\-handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf al\-::cerr\-\_\-handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{classal_1_1cerr__handler_adc5f179798baf0a4c6a53a539814b4db}
+\-This is the method called to handle a log entry. \-It is meant for people who want a custom log format. 
+\begin{DoxyParams}{\-Parameters}
+{\em message} & \-The raw text of the entry \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classal_1_1handler_af041d0c1de7e49607e27572f73413e82}{al\-::handler}.
+
+\hypertarget{classal_1_1cerr__handler_adc5f179798baf0a4c6a53a539814b4db}{\index{al\-::cerr\-\_\-handler@{al\-::cerr\-\_\-handler}!handle@{handle}}
+\index{handle@{handle}!al::cerr_handler@{al\-::cerr\-\_\-handler}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf al\-::cerr\-\_\-handler\-::handle} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{classal_1_1cerr__handler_adc5f179798baf0a4c6a53a539814b4db}
+\-This is the method called to handle a log entry. \-It is meant for people who want a custom log format. 
+\begin{DoxyParams}{\-Parameters}
+{\em message} & \-The raw text of the entry \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classal_1_1handler_af041d0c1de7e49607e27572f73413e82}{al\-::handler}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-src/handlers/cerr\-\_\-handler.\-hpp\end{DoxyCompactItemize}
+src/handlers/cerr\-\_\-handler.\-hpp\item 
+src/handlers/clog\-\_\-handler.\-hpp\end{DoxyCompactItemize}
