@@ -15,9 +15,16 @@ file_handler.o : src/handlers/file_handler.cpp
 	g++ -std=c++0x -c $(CFLAGS) -Isrc src/handlers/file_handler.cpp
 rotator.o : src/handlers/file_manipulators/rotator.cpp
 	g++ -std=c++0x -c $(CFLAGS) -Isrc src/handlers/file_manipulators/rotator.cpp
+
+clean-all:
+	rm -rf *.o
+	rm demo
+	rm -rf logs*
+	rm -rf log
 clean:
 	rm -rf *.o
 	rm demo
 clean-logs:
 	rm -rf logs*
 	rm -rf log
+

@@ -51,6 +51,28 @@ namespace al{
        * Appends the string to the current message
        */
       virtual logger& operator<<(const std::string&);
+      /**
+       * Appends the long to the current message
+       */
+      virtual logger& operator<<(const int&);
+      /**
+       * Appends the long to the current message
+       */
+      virtual logger& operator<<(const long&);
+      /**
+       * Appends the double to the current message
+       */
+      virtual logger& operator<<(const double&);
+      /**
+       * Appends the char to the current message
+       */
+      virtual logger& operator<<(const char&);
+
+      /**
+       * Appends the T instance to the current message
+       * This uses a string stream to convert it.
+       * IT WILL FAIL FOR TYPES WITHOUT AN operator<<(stringstream&, T) of some type
+       */
 
       /**
        * Logs the current message
@@ -73,6 +95,9 @@ namespace al{
 
         std::string message;
         level current_level;
+
+        template<typename T>
+        logger& add_input(const T&);
   };
 }
 

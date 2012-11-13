@@ -1,5 +1,6 @@
 #include "logger.hpp"
 #include <ctime>
+#include <sstream>
 using namespace al;
 
 al::end al::endl;
@@ -24,6 +25,25 @@ logger& logger::operator<<(level l){
   return *this;
 }
 
+template<typename T>
+logger& logger::add_input(const T& t){
+  std::stringstream ss;
+  ss<<t;
+  return operator<<(ss.str());
+}
+
+logger& logger::operator<<(const int& input){
+  return add_input(input);
+}
+logger& logger::operator<<(const double& input){
+  return add_input(input);
+}
+logger& logger::operator<<(const char& input){
+  return add_input(input);
+}
+logger& logger::operator<<(const long& input){
+  return add_input(input);
+}
 logger& logger::operator<<(const std::string& input){
   message+=input;
   return *this;
