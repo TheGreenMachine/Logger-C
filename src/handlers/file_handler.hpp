@@ -1,6 +1,7 @@
 #ifndef FILE_HANDLER_H
 #define FILE_HANDLER_H
-#include <fstream> //A simple header which has forward declarations of all streams
+#include <fstream>
+#include <string>
 #include "handler.hpp"
 
 namespace al{
@@ -41,6 +42,27 @@ namespace al{
     private:
       std::ofstream stream;
   };
+
+  #include <stdexcept>
+
+
+  file_handler::file_handler(const std::string& file):stream(file.c_str()){
+    if(!stream)
+      throw std::runtime_error("Unable to open file: " + file);
+  }
+
+  void file_handler::handle(level l, const std::string& name, const std::string& message){
+    stream<<to_string(l)<<','<<name<<','<<message<<std::endl;
+  }
+
+  void file_handler::handle(level l, const std::string& time, const std::string& name, const std::string& message){
+    stream<<to_string(l)<<','<<time<<','<<name<<','<<message<<std::endl;
+  }
+
+  void file_handler::handle(const std::string& message){
+    stream<<message<<std::endl;
+  }
+
 }
 
 #endif
