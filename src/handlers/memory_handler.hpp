@@ -45,7 +45,7 @@ namespace al{
        *
        * If an exception is thrown, it is caught silently and the destructor returns.
        */
-      ~memory_handler();
+      virtual ~memory_handler();
     private:
 
       struct log_entry{
@@ -101,14 +101,16 @@ namespace al{
   //raw
   void memory_handler::handle(const std::string& message){
     if(size == buffer.size()){
-      buffer.pop_front(); }
+      buffer.pop_front(); 
+    }
     buffer.push_back(log_entry(message));
   }
 
   memory_handler::~memory_handler(){
+#if 1
     for(std::deque<log_entry>::const_iterator entry =  buffer.begin(); 
         entry!=buffer.end(); ++entry){
-      try{
+      //try{
         switch(entry->type){
           case log_entry::name_stamped: 
             exit_handler->handle(entry->l, entry->name, entry->message);
@@ -120,12 +122,13 @@ namespace al{
             exit_handler->handle(entry->message);
             break;
         }
-      }
-      catch(...){
-        return; //Exception thrown! bail out!
-      }
+      //}
+      //catch(...){
+        //return; //Exception thrown! bail out!
+      //}
     }
   }
+#endif
 
 }
 #endif
