@@ -1,11 +1,11 @@
 #ifndef LOGGER_CREATOR_H
 #define LOGGER_CREATOR_H
 
-#include <list>
-#include <memory>
+#include <vector>
 #include "logger.hpp"
 #include "handlers/handler.hpp"
 #include "levels.hpp"
+#include "ptr_utils/smart_ptr.hpp"
 
 namespace al{
   
@@ -20,7 +20,9 @@ namespace al{
        * creates a default logger, the initial ignore level is none
        * 
        */
-      logger_creator():ignore_level(level::none),is_timestamped(true) {}
+      logger_creator():
+        ignore_level(none),
+        is_timestamped(true) {}
 
       /**
        * This adds a new handler to the list of handlers. This will NOT
@@ -29,7 +31,7 @@ namespace al{
        *
        * @param new_handler The handler that will be added.
        */
-      logger_creator& add_handler(const std::shared_ptr<handler>& new_handler){
+      logger_creator& add_handler(const smart_ptr<handler>& new_handler){
         handler_list.push_back(new_handler);
         return *this;
       }
@@ -42,7 +44,7 @@ namespace al{
        * @param new_handler The handler that will be added.
        */
       logger_creator& add_handler(handler* new_handler){
-        handler_list.emplace_back(new_handler);
+        handler_list.push_back(smart_ptr<handler>(new_handler));
         return *this;
       }
 
@@ -79,7 +81,7 @@ namespace al{
 
       virtual ~logger_creator(){}
     protected:
-      std::list<std::shared_ptr<handler>> handler_list;
+      std::vector<smart_ptr<handler> > handler_list;
       level ignore_level;
       bool is_timestamped;
   };

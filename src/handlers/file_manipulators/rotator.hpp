@@ -2,6 +2,7 @@
 #define ROTATOR_H
 #include <string>
 #include <fstream>
+#include <sstream>
 
 namespace al{
   namespace file_manipulator{
@@ -65,9 +66,9 @@ namespace al{
 
   void rotator::rotate(){
     using std::string; //Saving some finger work
+    using std::stringstream;
     using std::rename;
     using std::remove;
-    using std::to_string;
     using std::runtime_error;
 
     stream.close();
@@ -76,24 +77,27 @@ namespace al{
     curr_file = (curr_file>files-1) ? (files-1) : curr_file;
 
     for(size_t file_n=curr_file-1; file_n>0; --file_n){
-      string future = file_root + to_string(file_n+1);
+      stringstream converter;
+      converter<<file_n+1;
+      string future = file_root + converter.str();
 
       if(file_n == files){
         future = file_root;
       }
 
-      string original = file_root+to_string(file_n);
+      converter.ignore();
+      converter << file_n;
+      string original = file_root+converter.str();
       if( rename(original.c_str(), future.c_str()) )//A zero return is success.
         throw runtime_error("Unable to rename "+original+" to "+future);
     }
 
-    string future = file_root + to_string(1);
+    string future = file_root + "1";
 
     if( rename(file_root.c_str(), future.c_str()) ) 
       throw runtime_error("Unable to rename "+file_root+" to "+future);
 
-    stream.open(file_root);
+    stream.open(file_root.c_str());
   }
-
 }
 #endif

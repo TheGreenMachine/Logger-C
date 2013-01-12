@@ -11,7 +11,7 @@ namespace al{
    * {@code none} shouldn't be used to log error messages per se, it is more suited for
    * setting the ignore level on a logger_creator
    */
-  enum class level{
+  enum level{
     none,
     debug,
     info,

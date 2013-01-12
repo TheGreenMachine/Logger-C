@@ -1,7 +1,6 @@
 #ifndef MEMORY_HANDLER_H
 #define MEMORY_HANDLER_H
 
-#include <memory>
 #include <deque>
 #include "handler.hpp"
 
@@ -17,7 +16,7 @@ namespace al{
        * @param bsize The maximum number of entries to store in memory.
        * @param exit The handler which should be invoked on this objects destruction.
        */
-      memory_handler(size_t bsize,std::shared_ptr<handler> exit);
+      memory_handler(size_t bsize,smart_ptr<handler> exit);
 
       /**
        * @param bsize The maximum number of entries to store in memory.
@@ -52,15 +51,15 @@ namespace al{
       struct log_entry{
 
         log_entry(level lev, const std::string& n, const std::string& m)
-          :type(message_type::name_stamped), l(lev), name(n), message(m) {}
+          :type(name_stamped), l(lev), name(n), message(m) {}
 
         log_entry(level lev, const std::string& t, const std::string& n, const std::string& m)
-          :type(message_type::time_stamped), l(lev),time(t), name(n), message(m) {}
+          :type(time_stamped), l(lev),time(t), name(n), message(m) {}
 
         log_entry(const std::string& m)
-          :type(message_type::raw), message(m) {}
+          :type(raw), message(m) {}
 
-        enum class message_type {
+        enum message_type {
           name_stamped,
           time_stamped,
           raw
@@ -72,12 +71,12 @@ namespace al{
         const std::string message;
       };
 
-      std::shared_ptr<handler> exit_handler;
+      smart_ptr<handler> exit_handler;
       size_t size;
       std::deque<log_entry> buffer;
   };
 
-  memory_handler::memory_handler(size_t bsize, std::shared_ptr<handler> exit)
+  memory_handler::memory_handler(size_t bsize, smart_ptr<handler> exit)
     :exit_handler(exit), size(bsize){}
 
   memory_handler::memory_handler(size_t bsize, handler* exit)
@@ -88,7 +87,7 @@ namespace al{
     if(size == buffer.size()){
       buffer.pop_front();
     }
-    buffer.emplace_back(l, name, message);
+    buffer.push_back(log_entry(l, name, message));
   }
 
   //time
@@ -96,29 +95,29 @@ namespace al{
     if(size == buffer.size()){
       buffer.pop_front();
     }
-    buffer.emplace_back(l, time, name, message);
+    buffer.push_back(log_entry(l, time, name, message));
   }
 
   //raw
   void memory_handler::handle(const std::string& message){
     if(size == buffer.size()){
-      buffer.pop_front();
-    }
-    buffer.emplace_back(message);
+      buffer.pop_front(); }
+    buffer.push_back(log_entry(message));
   }
 
   memory_handler::~memory_handler(){
-    for(const auto& entry : buffer){
+    for(std::deque<log_entry>::const_iterator entry =  buffer.begin(); 
+        entry!=buffer.end(); ++entry){
       try{
-        switch(entry.type){
-          case log_entry::message_type::name_stamped: 
-            exit_handler->handle(entry.l, entry.name, entry.message);
+        switch(entry->type){
+          case log_entry::name_stamped: 
+            exit_handler->handle(entry->l, entry->name, entry->message);
             break;
-          case  log_entry::message_type::time_stamped:
-            exit_handler->handle(entry.l,entry.time, entry.name, entry.message);
+          case  log_entry::time_stamped:
+            exit_handler->handle(entry->l,entry->time, entry->name, entry->message);
             break;
-          case  log_entry::message_type::raw:
-            exit_handler->handle(entry.message);
+          case  log_entry::raw:
+            exit_handler->handle(entry->message);
             break;
         }
       }

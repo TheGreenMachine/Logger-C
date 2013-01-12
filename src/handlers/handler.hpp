@@ -4,9 +4,10 @@
 #include <string>
 #include <stdexcept>
 #include "../levels.hpp"
+#include "../ptr_utils/smart_ptr.hpp"
 
 namespace al{
-  
+    
   /**
    * @Class handler
    * @brief An abstract base class for all handler classes.
@@ -47,17 +48,16 @@ namespace al{
        */
       virtual std::string to_string(level l){
         switch(l){
-          case level::none          : return "          none";
-          case level::info          : return "          info";
-          case level::debug         : return "         debug";
-          case level::warning       : return "       warning";
-          case level::nonfatal_error: return "nonfatal_error";
-          case level::fatal_error   : return "   fatal_error";
+          case none          : return "          none";
+          case info          : return "          info";
+          case debug         : return "         debug";
+          case warning       : return "       warning";
+          case nonfatal_error: return "nonfatal_error";
+          case fatal_error   : return "   fatal_error";
           default: throw std::runtime_error("Unrecognized type");
         }
         return "";
       }
   };
 }
-
 #endif

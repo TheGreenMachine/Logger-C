@@ -12,7 +12,7 @@ namespace al{
       {}
       smart_ptr(const T& ins):copies(new int(1)), ptr(new T(ins))
       {}
-      smart_ptr(smart_ptr<T>& cp):copies(cp.copies),
+      smart_ptr(const smart_ptr<T>& cp):copies(cp.copies),
                                       ptr(cp.ptr)
       {
         ++(*copies);
