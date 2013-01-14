@@ -17,10 +17,8 @@ namespace al{
    */
   class end{};
 
-  end endl(){
-      static end e; 
-      return e;
-  }
+  const end endl;
+  
 
   /**
    * @Class logger
