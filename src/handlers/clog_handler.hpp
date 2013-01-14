@@ -11,7 +11,7 @@ namespace al{
    *
    * The messages are of the form "(level) time, name : message" for easy readability.
    */
-  class cerr_handler : public handler{
+  class clog_handler : public handler{
     public: 
       void handle(level l, const std::string& name, const std::string& message){
         std::clog<<"("<< to_string(l) << ") "<<name<<" : "<<message<<std::endl;
