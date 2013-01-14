@@ -1,8 +1,7 @@
-PROJECT = library.a
 CFLAGS  = -Wall -pedantic
 
 demo :
-	g++ demo.cpp  2> error
+	g++ ${CFLAGS} examples/demo.cpp -o demo 
 
 clean-all:
 	rm -rf *.o
