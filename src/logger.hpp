@@ -17,12 +17,15 @@ namespace al{
    */
   class end{};
 
-  const end endl;
+  const end endl = end(); //Windriver seems to be broken, so the explicit init
+                          //is necessary
   
 
   /**
    * @Class logger
-   *@brief logger is a class which accepts log messages with the << operator or through a member function called log. It then passes the message off to its predetermined handlers.
+   *@brief logger is a class which accepts log messages with the << operator 
+   * or through a member function called log. It then 
+   * passes the message off to its predetermined handlers.
    */
   class logger{
     public:
