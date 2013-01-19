@@ -1,3 +1,5 @@
+#ifndef LOGGER_DEMO_CPP
+#define LOGGER_DEMO_CPP
 #include "../al.hpp"
 using namespace al;
 
@@ -21,3 +23,5 @@ int main(){
   for(int i = 0; i<25; ++i)
     log<<i<<endl;
 }
+
+#endif
